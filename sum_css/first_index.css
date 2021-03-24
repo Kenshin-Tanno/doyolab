@@ -1,0 +1,94 @@
+logo img{
+    display: block;
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* 画像のトリミング */
+}
+logotohome img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* 画像のトリミング */
+}
+
+/* トップページの一覧に関するスタイル----------------------------------------------*/
+figure {
+    display: inline-block;   /* インラインブロック化 */
+    margin: 0px 3px 7px 0px; /* 外側に余白を追加(※右に3px・下に7px) */
+    background-color: #f6faff; 
+}
+figure img {
+    display: block;          /* 余計な余白が出ないようにする */
+    margin: 0px 0px 3px 0px; /* 下側にだけ3pxの余白を追加 */
+    width: 700px;
+    height: 500px;
+    object-fit: cover; /* 画像のトリミング */
+}
+figcaption {
+    width: 700px;
+    height: 150px;
+    font-size: 30px;        /* 文字サイズを90%に */
+    text-align: center;      /* 中身をセンタリング */
+    font-family: sans-serif;
+	color: #2c323f;
+    word-wrap: break-word;
+}
+
+.arduino{
+    float: left;
+}
+
+.python{
+    float: right;
+}
+
+.HTML{
+    float: left;
+}
+
+.FAB{
+    float: right;
+}
+
+.etc{
+    float: left;
+}
+
+/* ---------------------------------------------------------------------------*/
+
+
+/* ========== common ========== */
+html, body {
+	font-size: 20px;
+	font-family: "Gill Sans", sans-serif;
+	color: #37383a;
+    margin-left: 15px;
+    margin-bottom: 40px;
+    text-align: left; 
+	background: #f7fbff;
+}
+h1{
+    text-indent: 0em;
+    text-align: center; 
+}
+h2{
+    margin-left: 2em;
+    margin-top: 2em;
+}
+h3{
+    margin-left: 3em;
+}
+h5{
+    text-indent: 0em;
+    text-align: center; 
+}
+p,div{
+    margin-left: 5em;
+    margin-right: 5em;
+}
+span.blackback{
+    text-indent: 6em;
+    background: #273250;
+    color: #efefef;
+}
+
