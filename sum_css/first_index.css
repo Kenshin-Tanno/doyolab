@@ -13,31 +13,31 @@ logotohome img{
 
 /* トップページの一覧に関するスタイル----------------------------------------------*/
 figure {
-    display: inline-block;   /* インラインブロック化 */
-    margin: 0px 3px 7px 0px; /* 外側に余白を追加(※右に3px・下に7px) */
-    background-color: #f6faff; 
+    display: block;   /* インラインブロック化 */
+    margin: 50px; /* 外側に余白を追加(※右に3px・下に7px) */
+    background-color: #ffffff; 
 }
 figure img {
     display: block;          /* 余計な余白が出ないようにする */
-    margin: 0px 0px 3px 0px; /* 下側にだけ3pxの余白を追加 */
-    width: 700px;
-    height: 500px;
+    margin: 0px 0px 15px 0px; /* 下側にだけ3pxの余白を追加 */
+    width: 600px;
+    height: 400px;
     object-fit: cover; /* 画像のトリミング */
+    box-shadow: 0px 0px 15px 0px #bebebe;
 }
 figcaption {
-    width: 700px;
-    height: 150px;
+    width: 600px;
+    height: 100px;
     font-size: 30px;        /* 文字サイズを90%に */
-    text-align: center;      /* 中身をセンタリング */
     font-family: sans-serif;
 	color: #2c323f;
     word-wrap: break-word;
+    text-align: center;
 }
 
 .arduino{
     float: left;
 }
-
 .python{
     float: right;
 }
@@ -54,22 +54,31 @@ figcaption {
     float: left;
 }
 
+.text{
+    text-align: left;
+    float: right;
+    display: block;
+    margin: 150px;
+}
+
 /* ---------------------------------------------------------------------------*/
 
 
 /* ========== common ========== */
 html, body {
-	font-size: 20px;
-	font-family: "Gill Sans", sans-serif;
-	color: #37383a;
-    margin-left: 15px;
+	font-size: 30px;
+	font-family: serif;
+	color: #1f1e1e;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-bottom: 40px;
     text-align: left; 
-	background: #f7fbff;
+	background: #ffffff;
 }
 h1{
-    text-indent: 0em;
-    text-align: center; 
+    text-indent: 1em;
+    font-size: 50px;
+    margin: 0px;
 }
 h2{
     margin-left: 2em;
@@ -80,15 +89,16 @@ h3{
 }
 h5{
     text-indent: 0em;
-    text-align: center; 
 }
-p,div{
-    margin-left: 5em;
-    margin-right: 5em;
+p{
+    margin-left: 2em;
+    margin-right: 2em;
 }
 span.blackback{
     text-indent: 6em;
     background: #273250;
     color: #efefef;
 }
+
+
 
