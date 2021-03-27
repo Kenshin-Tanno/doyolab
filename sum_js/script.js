@@ -25,7 +25,7 @@ console.log("画面の高さ",window.innerHeight)
      }
   )
 
-  const targetWords = document.querySelector("header");
+  const targetWords = document.querySelector(".big");
  console.log("画面の高さ",window.innerHeight)
  
   document.addEventListener("scroll",function() {
