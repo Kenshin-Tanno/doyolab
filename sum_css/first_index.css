@@ -5,7 +5,7 @@ body{
 }
 
 .big{
-    font-family: serif;
+    font-family: "YuKyokasho";
     margin-top: 300px;
     margin-bottom: 300px;
     height: 300px;
@@ -24,32 +24,35 @@ body{
 
 .big .sports{
     margin-left: 300px;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: bold;
     width:100%;
     height: 100px;
     display: flex;
     align-items: center;
+    padding: 20px;
 }
 .big h1{
-    font-size: 70px;
+    font-size: 80px;
     font-weight: bold;
     width:100%;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .big .future{
     margin-right: 300px;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: bold;
     width:100%;
     height: 100px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding: 20px;
 }
 
 main{
@@ -130,6 +133,7 @@ main{
     list-style: none;
     position: relative;
     margin-top: 200px;
+    margin-bottom: 200px;
 }
 
 .contents li:nth-of-type(odd){
@@ -187,12 +191,29 @@ figure img {
     transition: 1s 0.2s;
 }
 
+.last{
+    background-color: rgb(238, 247, 255);
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
 .last img{
-    margin-top: 300px;
-    margin-left: 30px;
-    padding: 10px;
-    width: 40%;
-    height: 40%;
+    display: block;
+    padding: 50px;
+    width: 20%;
+    height: 20%;
+}
+
+.last h5{
+    display: block;
+    white-space: nowrap;
+    padding: 50px;
+    font-size: 15px;
+
+
 }
 
 @keyframes slideAnimation{
