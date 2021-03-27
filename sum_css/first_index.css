@@ -1,17 +1,54 @@
+@charset "utf-8";
 
 body{
     font-family: sans-serif;
 }
 
 header{
-    padding: 50px;
+    font-family: serif;
+    margin-top: 300px;
+    margin-bottom: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 3s;
 }
 
+header.show{
+    transform: none;
+    opacity: 1;
+}
+
+header .sports{
+    margin-left: 300px;
+    font-size: 50px;
+    font-weight: bold;
+    width:100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
 header h1{
     font-size: 70px;
     font-weight: bold;
-    margin-bottom: 60px;
-    white-space: nowrap;
+    width:100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .future{
+    margin-right: 300px;
+    font-size: 50px;
+    font-weight: bold;
+    width:100%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 main{
@@ -27,20 +64,73 @@ main{
     opacity: 1;
 }
 
+.pic.show{
+    transform: none;
+    opacity: 1;
+}
+
+.text li{
+    padding: 10px;
+}
+
+.text li:before {
+    content:  "";     /* 空の要素作成 */
+    width:  10px;               /* 幅指定 */
+    height:  10px;              /* 高さ指定 */
+    display:  inline-block;     /* インラインブロックにする */
+    background-color: #435b70;  /* 背景色指定 */
+    border-radius:  80%;        /* 要素を丸くする */
+    position:  relative;        /* 位置調整 */
+    top: -1px;                  /* 位置調整 */
+    margin-right: 5px;          /* 余白指定 */
+}
+
+.pic{
+    display: flex;
+    width: 100%;
+    margin-top: 300px;
+    margin-bottom: 300px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 3s;
+}
+
+.pic img{
+    position: relative;
+    width: 30%;
+    height: 30%;
+    float: left;
+    padding: 50px;
+}
+
+.text{
+    text-align: left;
+    float: right;
+    white-space: nowrap;
+    padding: 50px;
+}
+
+.text h1{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.text h2{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+
 .contents li{
     list-style: none;
     position: relative;
     margin-top: 200px;
-    /*opacity: 0;
-    transform: translateY(50px);
-    transition: 1s;*/
 }
-/*
-.contents li.show{
-    opacity: 1;
-    transform: none;
-}
-*/
+
 .contents li:nth-of-type(odd){
     float: right;
 }
@@ -96,51 +186,46 @@ figure img {
     transition: 1s 0.2s;
 }
 
-@keyframes titleAnimation{
-    0%{
-        letter-spacing: 0.1em;
-        opacity: 0;
-        transform: translateX(20px);
-    }
-}
-
-@keyframes logoAnimation{
-    0%{
-        opacity: 0;
-        transform: translateY(20px);
-    }
-}
-
-@keyframes picAnimation{
-    0%{
-        opacity: 0;
-        transform: translateX(20px);
-    }
-}
-
-.pic img{
-    position: relative;
-    width: 30%;
-    height: 30%;
-    float: left;
-    margin-top: 200px;
-    margin-left: 200px;
-    margin-bottom: 100px;
-    padding: 50px;
-    animation: picAnimation 3s;
-}
-
-.text{
-    text-align: left;
-    float: right;
-    white-space: nowrap;
+.last img{
     margin-top: 300px;
-    margin-right: 200px;
-    margin-bottom: 300px;
-    padding: 50px;
-    animation: titleAnimation 3s;
+    margin-left: 30px;
+    padding: 10px;
+    width: 40%;
+    height: 40%;
 }
 
+@keyframes slideAnimation{
+    0%{
+        opacity: 0;
+    }
+}
+
+.swiper-container{
+    animation: slideAnimation 3s;
+    margin-bottom: 300px;
+}
+
+.swiper-slide{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.swiper-slide.slide1{
+    background-image: url(../images/index/slide1.jpg);
+}
+.swiper-slide.slide2{
+    background-image: url(../images/index/slide2.jpg);
+}
+.swiper-slide.slide3{
+    background-image: url(../images/index/slide3-2.jpg);
+}
+.swiper-slide.slide4{
+    background-image: url(../images/index/slide4-2.jpg);
+}
+
+/*
 logo img{
     display: block;
     width: 100px;
@@ -156,7 +241,6 @@ logotohome img{
     animation: logoAnimation 2s;
 }
 
-/*
 logo img{
     display: block;
     width: 150px;

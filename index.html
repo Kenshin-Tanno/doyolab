@@ -3,31 +3,57 @@
 <head>
   <meta charset="UTF-8"/>
     <title>
-      Kenshin Tanno HP 
+      Kenshin Tanno's HP 
     </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="sum_css/first_index.css">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
     <script src="sum_js/script.js" defer></script>
 </head>
 
 
 <body>
+  <div class="swiper-container">
 
-    <logo>
-        <!--logoはimageフォルダのlogo.pngを使用している。自分のロゴや写真を載せるとわかりやすい-->
-        <img src="images/tamio2.png" alt="">
-    </logo><br>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide slide1"></div>
+      <div class="swiper-slide slide2"></div>
+      <div class="swiper-slide slide3"></div>
+      <div class="swiper-slide slide4"></div>
+    </div>
+
+    <div class="swiper-pagination"></div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+  </div>
+
+  <header> 
+    <p class="sports">スポーツ選手が</p>
+    <h1> 不本意な怪我をしない</h1>
+    <p class="future">未来をつくる</p>
+  </header>
     
     <ul class="pic">
+      <img src="images/index/me-2.jpg" alt="This is me">
         <div class="text">
-            <h1>
-              Hi There!
-            </h1><br>
-            This is written by Kenhin Tanno.<br>
-            I will update about <br>Arduino, Python, HTML, FAB, etc.<br>
-            wait a minute for updating!<br>
+          <h1>
+            丹野健心 / Kenshin Tanno<br><br>
+          </h1>
+          <li>埼玉県さいたま市出身</li>
+          <li>山梨学院高校サッカー部</li>
+          <li>神奈川大学経営学部</li><br><br>
+          <h2>I will update about</h2>  <br>
+          <li>Arduino</li>
+          <li>Python</li>
+          <li>HTML</li>
+          <li>FAB</li>
+          <li>etc...</li><br>
         </div>
       <br><br><!--brは改行-->
-      <img src="images/index/me-2.jpg" alt="This is me">
     </ul>
     
 
@@ -92,11 +118,14 @@
               <p>latest 2021/02/25</p> 
           </figcaption>
         </figure><br>
-      </div>
+      </li>
 
     </ul>
+    
   </main>
-    
-    
+
+  <ul class="last">
+    <img src="images/index/tamio.jpg" alt="">
+  </ul>
     
 </body>
