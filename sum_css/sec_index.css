@@ -1,21 +1,33 @@
-logo img{
-    display: block;
-    width: 100px;
-    height: 100px;
-    object-fit: cover; /* 画像のトリミング */
+@charset "utf-8";
+
+header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
-logotohome img{
-    display: block;
-    width: 100px;
-    height: 100px;
-    object-fit: cover; /* 画像のトリミング */
+
+header img{
+    height: 100%;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+header p{
+    font-family: "Yukyokasho";
+    display: flex;
+    justify-content: center;
+    font-size: 70px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
 }
 
 /* トップページの一覧に関するスタイル----------------------------------------------*/
 figure {
     display: inline-block;   /* インラインブロック化 */
     margin: 0px 3px 7px 0px; /* 外側に余白を追加(※右に3px・下に7px) */
-    background-color: #f6faff; 
+    background-color: #ffffff; 
 }
 figure img {
     display: block;          /* 余計な余白が出ないようにする */
@@ -34,40 +46,167 @@ figcaption {
     word-wrap: break-word;
 }
 
-/* ---------------------------------------------------------------------------*/
 
-
-/* ========== common ========== */
-html, body {
-	font-size: 20px;
-	font-family: "Gill Sans", sans-serif;
-	color: #37383a;
-    margin-left: 15px;
-    margin-bottom: 40px;
-    text-align: left; 
-	background: #f7fbff;
-}
-h1{
-    text-indent: 0em;
-    text-align: center; 
-}
-h2{
-    margin-left: 2em;
-    margin-top: 2em;
-}
-h3{
-    margin-left: 3em;
-}
-h5{
-    text-indent: 0em;
-    text-align: center; 
-}
-p,div{
-    margin-left: 5em;
-}
-span.blackback{
-    text-indent: 6em;
-    background: #273250;
-    color: #efefef;
+body{
+    font-family: sans-serif;
 }
 
+.big{
+    font-family: "YuKyokasho";
+    margin-top: 300px;
+    margin-bottom: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 3s;
+}
+
+.big.show{
+    transform: none;
+    opacity: 1;
+}
+
+.big .sports{
+    font-size: 60px;
+    font-weight: bold;
+    width: 90%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+.big h1{
+    font-size: 80px;
+    font-weight: bold;
+    width:90%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.big .future{
+    font-size: 60px;
+    font-weight: bold;
+    width:90%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    white-space: nowrap;
+}
+
+main{
+    max-width: 80%;
+    width: 100%;
+    margin: 50px auto;
+}
+
+.contents li.show figcaption div,
+.contents li.show figcaption p,
+.contents li.show figure img{
+    transform: none;
+    opacity: 1;
+}
+
+.pic.show{
+    transform: none;
+    opacity: 1;
+}
+
+.text li{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.text li:before {
+    content:  "";     /* 空の要素作成 */
+    width:  10px;               /* 幅指定 */
+    height:  10px;              /* 高さ指定 */
+    display:  inline-block;     /* インラインブロックにする */
+    background-color: #435b70;  /* 背景色指定 */
+    border-radius:  80%;        /* 要素を丸くする */
+    position:  relative;        /* 位置調整 */
+    top: -1px;                  /* 位置調整 */
+    margin-right: 5px;          /* 余白指定 */
+}
+
+.pic{
+    display: flex;
+    width: 100%;
+    margin-top: 300px;
+    margin-bottom: 300px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 3s;
+}
+
+.pic img{
+    position: relative;
+    width: 30%;
+    height: 30%;
+    padding: 50px;
+}
+
+.text{
+    text-align: left;
+    white-space: nowrap;
+    padding: 50px;
+}
+
+.text h1{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.text h2{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+
+.contents li{
+    list-style: none;
+    position: relative;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.contents li:nth-of-type(odd){
+    float: right;
+}
+
+.contents li:nth-of-type(even){
+    float: left;
+}
+
+.last{
+    background-color: rgb(238, 247, 255);
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.last img{
+    display: block;
+    padding: 50px;
+    width: 30%;
+    height: 30%;
+}
+
+.last h5{
+    display: block;
+    white-space: nowrap;
+    padding: 50px;
+    font-size: 15px;
+}

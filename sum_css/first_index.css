@@ -23,40 +23,38 @@ body{
 }
 
 .big .sports{
-    margin-left: 300px;
     font-size: 60px;
     font-weight: bold;
-    width:100%;
+    width: 90%;
     height: 100px;
     display: flex;
     align-items: center;
-    padding: 20px;
+    white-space: nowrap;
 }
 .big h1{
     font-size: 80px;
     font-weight: bold;
-    width:100%;
+    width:90%;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    white-space: nowrap;
 }
 
 .big .future{
-    margin-right: 300px;
     font-size: 60px;
     font-weight: bold;
-    width:100%;
+    width:90%;
     height: 100px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 20px;
+    white-space: nowrap;
 }
 
 main{
-    max-width: 1000px;
+    max-width: 80%;
     width: 100%;
     margin: 50px auto;
 }
@@ -75,6 +73,7 @@ main{
 
 .text li{
     padding: 10px;
+    font-size: 20px;
 }
 
 .text li:before {
@@ -105,13 +104,11 @@ main{
     position: relative;
     width: 30%;
     height: 30%;
-    float: left;
     padding: 50px;
 }
 
 .text{
     text-align: left;
-    float: right;
     white-space: nowrap;
     padding: 50px;
 }
@@ -142,6 +139,10 @@ main{
 
 .contents li:nth-of-type(even){
     float: left;
+}
+
+figure{
+    display: flex;
 }
 
 figcaption {
@@ -180,8 +181,7 @@ figcaption p{
 
 figure img {
     border-radius: 5px;
-    display: block;          
-    margin: 0px 0px 15px 0px; 
+    display: flex;          
     width: 600px;
     height: 400px;
     object-fit: cover;
@@ -203,8 +203,8 @@ figure img {
 .last img{
     display: block;
     padding: 50px;
-    width: 20%;
-    height: 20%;
+    width: 30%;
+    height: 30%;
 }
 
 .last h5{
@@ -212,8 +212,6 @@ figure img {
     white-space: nowrap;
     padding: 50px;
     font-size: 15px;
-
-
 }
 
 @keyframes slideAnimation{
@@ -229,7 +227,7 @@ figure img {
 
 .swiper-slide{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -248,94 +246,106 @@ figure img {
     background-image: url(../images/index/slide4-2.jpg);
 }
 
-/*
-logo img{
-    display: block;
-    width: 100px;
-    height: 100px;
-    object-fit: cover; 
-    animation: logoAnimation 2s;
-}
-logotohome img{
-    display: block;
-    width: 100px;
-    height: 100px;
-    object-fit: cover; 
-    animation: logoAnimation 2s;
-}
+@media screen and (max-width: 768px){
 
-logo img{
-    display: block;
-    width: 150px;
-    height: 150px;
-    object-fit: cover; 
-}
-logotohome img{
-    display: block;
-    width: 100px;
-    height: 100px;
-    object-fit: cover; 
-}
+    .big .sports{
+        font-size: 30px;
+        padding: 5px;
+    }
+    .big h1{
+        font-size: 40px;
+        padding: 5px;
+    }
+    
+    .big .future{
+        font-size: 30px;
+        padding: 5px;
+    }
 
+    .text h1{
+        font-size: 18px;
+    }
+    
+    .text h2{
+        font-size: 16px;
+    }
 
-figure {
-    display: block;  
-    margin: 50px;
-    background-color: #ffffff; 
-}
-figure img {
-    display: block;          
-    margin: 0px 0px 15px 0px; 
-    width: 600px;
-    height: 400px;
-    object-fit: cover;
-    box-shadow: 0px 0px 15px 0px #bebebe;
-}
-figcaption {
-    width: 600px;
-    height: 100px;
-    font-size: 30px;  
-    font-family: sans-serif;
-	color: #2c323f;
-    word-wrap: break-word;
-    text-align: center;
-}
+    .text li{
+        font-size: 14px;
+        padding: none;
+    }
 
 
+    .pic img{
+        width: 50%;
+        height: 50%;
+        padding: 5px;
+    }
 
-html, body {
-	font-size: 30px;
-	font-family: serif;
-	color: #1f1e1e;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 40px;
-    text-align: left; 
-	background: #ffffff;
-}
-h1{
-    text-indent: 1em;
-    font-size: 50px;
-    margin: 0px;
-}
-h2{
-    margin-left: 2em;
-    margin-top: 2em;
-}
-h3{
-    margin-left: 3em;
-}
-h5{
-    text-indent: 0em;
-}
-p{
-    margin-left: 2em;
-    margin-right: 2em;
-}
-span.blackback{
-    text-indent: 6em;
-    background: #273250;
-    color: #efefef;
-}
+    .text{
+        padding: 5px;
+    }
 
-*/
+    .contents li:nth-of-type(odd){
+        float: none;
+    }
+    
+    .contents li:nth-of-type(even){
+        float: none;
+    }
+
+    figure{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    figcaption {
+        display: block;
+        flex-direction: none;
+        align-items: none;
+        position: none;
+        top: 0px;
+    }
+
+    figure img {
+        border-radius: 5px;
+        display: block;          
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        box-shadow: 0px 0px 15px 0px #bebebe;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: 1s 0.2s;
+    }
+
+    .swiper-container{
+        margin-top: 200px;
+        animation: slideAnimation 3s;
+        margin-bottom: 300px;
+    }
+    
+    .swiper-slide{
+        height: 40vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .last img{
+        display: block;
+        padding: 30px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .last h5{
+        display: block;
+        white-space: nowrap;
+        padding: 30px;
+        font-size: 15px;
+    }
+    
+}
