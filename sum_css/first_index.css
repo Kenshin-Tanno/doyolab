@@ -230,7 +230,7 @@ figure img {
 }
 
 .swiper-slide.slide1{
-    background-image: url(../images/index/slide1.jpg);
+    background-image: url(../images/index/slide_1_real.jpg);
 }
 .swiper-slide.slide2{
     background-image: url(../images/index/slide2.jpg);
@@ -319,17 +319,29 @@ figure img {
     }
 
     .swiper-container{
-        margin-top: 200px;
         animation: slideAnimation 3s;
         margin-bottom: 300px;
     }
     
     .swiper-slide{
-        height: 45vh;
+        height: 100vh;
         width: 100%;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+    }
+
+    .swiper-slide.slide1{
+        background-image: url(../images/index/slide1_ipad.jpg);
+    }
+    .swiper-slide.slide2{
+        background-image: url(../images/index/slide2_ipad_real.jpg);
+    }
+    .swiper-slide.slide3{
+        background-image: url(../images/index/slide3_ipad_real.jpg);
+    }
+    .swiper-slide.slide4{
+        background-image: url(../images/index/slide4_ipad.jpg);
     }
 
     .last img{
@@ -424,18 +436,31 @@ figure img {
     }
 
     .swiper-container{
-        margin-top: 200px;
         animation: slideAnimation 3s;
         margin-bottom: 300px;
     }
     
     .swiper-slide{
-        height: 40vh;
+        height: 100vh;
         width: 100%;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
+
+    .swiper-slide.slide1{
+        background-image: url(../images/index/slide1_ipad.jpg);
+    }
+    .swiper-slide.slide2{
+        background-image: url(../images/index/slide2_ipad_real.jpg);
+    }
+    .swiper-slide.slide3{
+        background-image: url(../images/index/slide3_ipad_real.jpg);
+    }
+    .swiper-slide.slide4{
+        background-image: url(../images/index/slide4_ipad.jpg);
+    }
+
 
     .last img{
         display: block;
@@ -482,31 +507,36 @@ figure img {
     }
 
     .text h1{
-        font-size: 12px;
-        padding: 0px;
+        font-size: 8px;
+        padding: 5px;
+        margin-bottom: 2px;
+    }
+
+    .text br{
+        display: none;
     }
     
     .text h2{
-        font-size: 10px;
-        padding: 0px;
+        margin-top: 20px;
+        font-size: 6px;
+        padding: 5px;
     }
 
     .text li{
-        font-size: 8px;
+        font-size: 4px;
         padding: 2px;
     }
 
 
     .pic img{
-        width: 30%;
-        height: 30%;
-        padding: 1px;
+        width: 35%;
+        height: 35%;
+        padding: 10px;
     }
 
     .text{
-        padding: 1px;
+        padding: 10px;
     }
-
     .contents li:nth-of-type(odd){
         float: none;
     }
@@ -568,18 +598,31 @@ figure img {
     }
 
     .swiper-container{
-        margin-top: 200px;
         animation: slideAnimation 3s;
         margin-bottom: 300px;
     }
     
     .swiper-slide{
-        height: 25vh;
+        height: 100vh;
         width: 100%;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
+
+    .swiper-slide.slide1{
+        background-image: url(../images/index/slide1_iphone.jpg);
+    }
+    .swiper-slide.slide2{
+        background-image: url(../images/index/slider2_iphone.jpg);
+    }
+    .swiper-slide.slide3{
+        background-image: url(../images/index/slider3_iphone.jpg);
+    }
+    .swiper-slide.slide4{
+        background-image: url(../images/index/slider4_iphone.jpg);
+    }
+
 
     .last{
         background-color: rgb(238, 247, 255);
@@ -730,18 +773,31 @@ figure img {
     }
 
     .swiper-container{
-        margin-top: 200px;
         animation: slideAnimation 3s;
         margin-bottom: 300px;
     }
     
     .swiper-slide{
-        height: 31vh;
+        height: 100vh;
         width: 100%;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
+
+    .swiper-slide.slide1{
+        background-image: url(../images/index/slide1_iphone.jpg);
+    }
+    .swiper-slide.slide2{
+        background-image: url(../images/index/slider2_iphone.jpg);
+    }
+    .swiper-slide.slide3{
+        background-image: url(../images/index/slider3_iphone.jpg);
+    }
+    .swiper-slide.slide4{
+        background-image: url(../images/index/slider4_iphone.jpg);
+    }
+
 
     .last{
         background-color: rgb(238, 247, 255);

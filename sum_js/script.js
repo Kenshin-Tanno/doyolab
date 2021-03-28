@@ -44,7 +44,7 @@ console.log("画面の高さ",window.innerHeight)
     speed:1000,
 
     autoplay:{
-        delay:4000
+        delay:5000
     },
   
     // If we need pagination
