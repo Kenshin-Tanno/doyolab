@@ -506,12 +506,12 @@ figure img {
         border-radius:  80%;        /* 要素を丸くする */
         position:  relative;        /* 位置調整 */
         top: -1px;                  /* 位置調整 */
-        margin-right: 5px;          /* 余白指定 */
+        margin-right: 2px;          /* 余白指定 */
     }
 
     .text h1{
-        font-size: 8px;
-        padding: 5px;
+        font-size: 12px;
+        padding: 3px;
         margin-bottom: 2px;
     }
 
@@ -521,24 +521,24 @@ figure img {
     
     .text h2{
         margin-top: 20px;
-        font-size: 6px;
-        padding: 5px;
+        font-size: 10px;
+        padding: 3px;
     }
 
     .text li{
-        font-size: 4px;
-        padding: 2px;
+        font-size: 8px;
+        padding: 1px;
     }
 
 
     .pic img{
         width: 35%;
         height: 35%;
-        padding: 8px;
+        padding: 3px;
     }
 
     .text{
-        padding: 8px;
+        padding: 3px;
     }
     .contents li:nth-of-type(odd){
         float: none;
