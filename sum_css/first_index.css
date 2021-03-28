@@ -4,6 +4,63 @@ body{
     font-family: sans-serif;
 }
 
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 90px;
+    width: 100%;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 3s;
+    z-index: 9999;
+  }
+  
+  header.active {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: 0 2px 2px #ccc;
+    background-color: #fff;
+  }
+  
+  header img {
+    width: 10%;
+    height: 65px;
+    margin-left: 20px;
+  }
+  
+  header nav ul {
+    display: flex;
+  }
+  
+  header nav ul a {
+    font-size: 18px;
+    padding: 10px;
+  }
+  
+  header nav ul li:not(:first-of-type) {
+    margin-left: 25px;
+  }
+  
+  header .tel {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 150px;
+    color: #fff;
+    background-color: #252525;
+    font-size: 16px;
+  }
+  
+
 .big{
     font-family: "YuKyokasho";
     margin-top: 300px;
@@ -188,7 +245,7 @@ figure img {
 }
 
 .last{
-    background-color: rgb(238, 247, 255);
+    background-color: rgb(31, 31, 31);
     display: flex;
     height: 100%;
     width: 100%;
@@ -204,6 +261,7 @@ figure img {
 }
 
 .last h5{
+    color: #fff;
     display: block;
     white-space: nowrap;
     padding: 50px;
@@ -243,6 +301,10 @@ figure img {
 }
 
 @media screen and (max-width: 1024px){
+
+    header img {
+        height: 45px;
+    }
 
     .big .sports{
         font-size: 50px;
@@ -363,6 +425,14 @@ figure img {
 
 @media screen and (max-width: 768px){
 
+    header img {
+        height: 45px;
+    }
+        
+    header nav ul a {
+        font-size: 14px;
+    }
+
     .big .sports{
         font-size: 30px;
         padding: 5px;
@@ -479,6 +549,31 @@ figure img {
 }
 
 @media screen and (max-width: 375px){
+
+    header {
+        height: 50px;
+      }
+
+    header img {
+        width: 10%;
+        height: 20px;
+        margin-left: 5px;
+    }
+        
+    header nav ul {
+        display: flex;
+    }
+        
+    header nav ul a {
+        font-size: 5px;
+        padding: 3px;
+    }
+        
+    header .tel {
+        width: 50px;
+        color: #fff;
+        font-size: 4px;
+    }
 
     .big .sports{
         font-size: 20px;
@@ -628,7 +723,6 @@ figure img {
 
 
     .last{
-        background-color: rgb(238, 247, 255);
         display: flex;
         height: 100%;
         width: 100%;
@@ -803,7 +897,6 @@ figure img {
 
 
     .last{
-        background-color: rgb(238, 247, 255);
         display: flex;
         height: 100%;
         width: 100%;
