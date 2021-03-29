@@ -59,6 +59,32 @@ header .tel {
     background-color: #252525;
     font-size: 16px;
 }
+
+.swiper-container{
+    animation: slideAnimation 3s;
+    margin-bottom: 300px;
+}
+
+.swiper-slide{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.swiper-slide.slide1{
+    background-image: url(../images/index/slide_1_real.jpg);
+}
+.swiper-slide.slide2{
+    background-image: url(../images/index/slide2.jpg);
+}
+.swiper-slide.slide3{
+    background-image: url(../images/index/slide3-2.jpg);
+}
+.swiper-slide.slide4{
+    background-image: url(../images/index/slide4-2.jpg);
+}
   
 
 .big{
@@ -194,10 +220,6 @@ main{
     float: left;
 }
 
-figure{
-    display: flex;
-}
-
 figcaption {
     display: flex;
     flex-direction: column;
@@ -274,36 +296,46 @@ figure img {
     }
 }
 
-.swiper-container{
-    animation: slideAnimation 3s;
-    margin-bottom: 300px;
+@media screen and (max-width: 1230px){
+    .swiper-slide{
+        height: 680px;
+    }
 }
 
-.swiper-slide{
-    height: 100vh;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+@media screen and (max-width: 1160px){
+    .swiper-slide{
+        height: 650px;
+    }
 }
 
-.swiper-slide.slide1{
-    background-image: url(../images/index/slide_1_real.jpg);
-}
-.swiper-slide.slide2{
-    background-image: url(../images/index/slide2.jpg);
-}
-.swiper-slide.slide3{
-    background-image: url(../images/index/slide3-2.jpg);
-}
-.swiper-slide.slide4{
-    background-image: url(../images/index/slide4-2.jpg);
+@media screen and (max-width: 1075px){
+    .swiper-slide{
+        height: 630px;
+    }
 }
 
 @media screen and (max-width: 1024px){
 
     header img {
         height: 45px;
+    }
+
+    .swiper-slide{
+        height: 100vh;
+        width: 100%;
+    }
+
+    .swiper-slide.slide1{
+        background-image: url(../images/index/slide1_ipad.jpg);
+    }
+    .swiper-slide.slide2{
+        background-image: url(../images/index/slide2_ipad_real.jpg);
+    }
+    .swiper-slide.slide3{
+        background-image: url(../images/index/slide3_ipad_real.jpg);
+    }
+    .swiper-slide.slide4{
+        background-image: url(../images/index/slide4_ipad.jpg);
     }
 
     .big .sports{
@@ -356,61 +388,22 @@ figure img {
 
     figure{
         display: flex;
-        justify-content: center;
-        flex-direction: column;
     }
 
-    figcaption {
-        display: block;
-        flex-direction: none;
-        align-items: none;
-        position: none;
-        top: 0px;
+    figcaption{
+        display: flex;
     }
 
     figure img {
-        border-radius: 5px;
-        display: block;          
+        display: block;
         width: 100%;
-        height: 400px;
-        object-fit: cover;
-        box-shadow: 0px 0px 15px 0px #bebebe;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: 1s 0.2s;
-    }
-
-    .swiper-container{
-        animation: slideAnimation 3s;
-        margin-bottom: 300px;
-    }
-    
-    .swiper-slide{
-        height: 100vh;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
-    .swiper-slide.slide1{
-        background-image: url(../images/index/slide1_ipad.jpg);
-    }
-    .swiper-slide.slide2{
-        background-image: url(../images/index/slide2_ipad_real.jpg);
-    }
-    .swiper-slide.slide3{
-        background-image: url(../images/index/slide3_ipad_real.jpg);
-    }
-    .swiper-slide.slide4{
-        background-image: url(../images/index/slide4_ipad.jpg);
     }
 
     .last img{
         display: block;
         padding: 30px;
-        width: 30%;
-        height: 30%;
+        width: 20%;
+        height: 20%;
     }
     
     .last h5{
@@ -494,28 +487,9 @@ figure img {
     }
 
     figure img {
-        border-radius: 5px;
         display: block;          
         width: 100%;
         height: 400px;
-        object-fit: cover;
-        box-shadow: 0px 0px 15px 0px #bebebe;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: 1s 0.2s;
-    }
-
-    .swiper-container{
-        animation: slideAnimation 3s;
-        margin-bottom: 300px;
-    }
-    
-    .swiper-slide{
-        height: 100vh;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
     }
 
     .swiper-slide.slide1{
@@ -535,8 +509,8 @@ figure img {
     .last img{
         display: block;
         padding: 30px;
-        width: 30%;
-        height: 30%;
+        width: 20%;
+        height: 20%;
     }
     
     .last h5{
@@ -548,25 +522,43 @@ figure img {
     
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 428px){
 
     header {
         height: 50px;
       }
 
     header img {
-        height: 20px;
-        margin-left: 5px;
+        height: 55%;
+        width: 15%;
+        margin-left: 10px;
     }
         
     header nav ul a {
-        font-size: 5px;
+        font-size: 8px;
         padding: 3px;
     }
         
     header .tel {
         width: 50px;
-        font-size: 4px;
+        font-size: 7px;
+    }
+
+    .swiper-slide{
+        height: 100vh;
+    }
+
+    .swiper-slide.slide1{
+        background-image: url(../images/index/slide1_iphone.jpg);
+    }
+    .swiper-slide.slide2{
+        background-image: url(../images/index/slider2_iphone.jpg);
+    }
+    .swiper-slide.slide3{
+        background-image: url(../images/index/slider3_iphone.jpg);
+    }
+    .swiper-slide.slide4{
+        background-image: url(../images/index/slider4_iphone.jpg);
     }
 
     .big .sports{
@@ -587,13 +579,8 @@ figure img {
     }
     
     .text li:before {
-        content:  "";     /* 空の要素作成 */
         width:  5px;               /* 幅指定 */
         height:  5px;              /* 高さ指定 */
-        display:  inline-block;     /* インラインブロックにする */
-        background-color: #435b70;  /* 背景色指定 */
-        border-radius:  80%;        /* 要素を丸くする */
-        position:  relative;        /* 位置調整 */
         top: -1px;                  /* 位置調整 */
         margin-right: 2px;          /* 余白指定 */
     }
@@ -644,15 +631,9 @@ figure img {
     }
 
     figure img {
-        border-radius: 5px;
         display: block;          
         width: 100%;
         height: 200px;
-        object-fit: cover;
-        box-shadow: 0px 0px 15px 0px #bebebe;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: 1s 0.2s;
     }
 
     figcaption {
@@ -665,41 +646,64 @@ figure img {
 
     figcaption div{
         font-size: 12px;
-        font-weight: bold;
         white-space: nowrap;
-        background-color: rgba(240, 240, 240, 0.3);
         padding: 5px 10px;
-        letter-spacing: 0.05em;
-        border-radius: 5px;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: 1s;
     }
     
     figcaption p{
-        line-height: 1.6;
-        background-color: rgb(253, 253, 253);
         padding: 5px 5px;
         font-size: 8px;
         max-width: 340px;
         margin-top: 3px;
-        border-radius: 5px;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: 1s;
     }
 
-    .swiper-container{
-        animation: slideAnimation 3s;
-        margin-bottom: 300px;
+    .last{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
     }
     
+    .last img{
+        display: block;
+        padding: 15px;
+        width: 20%;
+        height: 20%;
+    }
+    
+    .last h5{
+        display: block;
+        white-space: nowrap;
+        padding: 15px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 414px){
+
+    header {
+        height: 50px;
+      }
+
+    header img {
+        height: 55%;
+        width: 15%;
+        margin-left: 10px;
+    }
+        
+    header nav ul a {
+        font-size: 8px;
+        padding: 3px;
+    }
+        
+    header .tel {
+        width: 50px;
+        font-size: 7px;
+    }
+
     .swiper-slide{
         height: 100vh;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
     }
 
     .swiper-slide.slide1{
@@ -715,6 +719,101 @@ figure img {
         background-image: url(../images/index/slider4_iphone.jpg);
     }
 
+    .big .sports{
+        font-size: 20px;
+        padding: 3px;
+        height: 50px;
+    }
+    .big h1{
+        font-size: 27px;
+        padding: 3px;
+        height: 50px;
+    }
+    
+    .big .future{
+        font-size: 20px;
+        padding: 3px;
+        height: 50px;
+    }
+    
+    .text li:before {
+        width:  5px;               /* 幅指定 */
+        height:  5px;              /* 高さ指定 */
+        top: -1px;                  /* 位置調整 */
+        margin-right: 2px;          /* 余白指定 */
+    }
+
+    .text h1{
+        font-size: 12px;
+        padding: 3px;
+        margin-bottom: 2px;
+    }
+
+    .text br{
+        display: none;
+    }
+    
+    .text h2{
+        margin-top: 20px;
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    .text li{
+        font-size: 8px;
+        padding: 1px;
+    }
+
+
+    .pic img{
+        width: 35%;
+        height: 35%;
+        padding: 3px;
+    }
+
+    .text{
+        padding: 3px;
+    }
+    .contents li:nth-of-type(odd){
+        float: none;
+    }
+    
+    .contents li:nth-of-type(even){
+        float: none;
+    }
+
+    figure{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    figure img {
+        display: block;          
+        width: 100%;
+        height: 200px;
+    }
+
+    figcaption {
+        display: block;
+        flex-direction: none;
+        align-items: none;
+        position: none;
+        top: 0px;
+    }
+
+    figcaption div{
+        font-size: 12px;
+        white-space: nowrap;
+        padding: 5px 10px;
+    }
+    
+    figcaption p{
+        padding: 5px 5px;
+        font-size: 8px;
+        max-width: 340px;
+        margin-top: 3px;
+    }
 
     .last{
         display: flex;
@@ -727,8 +826,161 @@ figure img {
     .last img{
         display: block;
         padding: 15px;
-        width: 30%;
-        height: 30%;
+        width: 20%;
+        height: 20%;
+    }
+    
+    .last h5{
+        display: block;
+        white-space: nowrap;
+        padding: 15px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 375px){
+
+    header {
+        height: 50px;
+      }
+
+    header img {
+        height: 20px;
+        margin-left: 5px;
+    }
+        
+    header nav ul a {
+        font-size: 5px;
+        padding: 3px;
+    }
+        
+    header .tel {
+        width: 50px;
+        font-size: 4px;
+    }
+
+    .swiper-slide.slide1{
+        background-image: url(../images/index/slide1_iphone.jpg);
+    }
+    .swiper-slide.slide2{
+        background-image: url(../images/index/slider2_iphone.jpg);
+    }
+    .swiper-slide.slide3{
+        background-image: url(../images/index/slider3_iphone.jpg);
+    }
+    .swiper-slide.slide4{
+        background-image: url(../images/index/slider4_iphone.jpg);
+    }
+
+    .big .sports{
+        font-size: 20px;
+        padding: 3px;
+        height: 50px;
+    }
+    .big h1{
+        font-size: 27px;
+        padding: 3px;
+        height: 50px;
+    }
+    
+    .big .future{
+        font-size: 20px;
+        padding: 3px;
+        height: 50px;
+    }
+    
+    .text li:before {
+        width:  5px;               /* 幅指定 */
+        height:  5px;              /* 高さ指定 */
+        top: -1px;                  /* 位置調整 */
+        margin-right: 2px;          /* 余白指定 */
+    }
+
+    .text h1{
+        font-size: 12px;
+        padding: 3px;
+        margin-bottom: 2px;
+    }
+
+    .text br{
+        display: none;
+    }
+    
+    .text h2{
+        margin-top: 20px;
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    .text li{
+        font-size: 8px;
+        padding: 1px;
+    }
+
+
+    .pic img{
+        width: 35%;
+        height: 35%;
+        padding: 3px;
+    }
+
+    .text{
+        padding: 3px;
+    }
+    .contents li:nth-of-type(odd){
+        float: none;
+    }
+    
+    .contents li:nth-of-type(even){
+        float: none;
+    }
+
+    figure{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    figure img {
+        display: block;          
+        width: 100%;
+        height: 200px;
+    }
+
+    figcaption {
+        display: block;
+        flex-direction: none;
+        align-items: none;
+        position: none;
+        top: 0px;
+    }
+
+    figcaption div{
+        font-size: 12px;
+        font-weight: bold;
+        padding: 5px 10px;
+    }
+    
+    figcaption p{
+        padding: 5px 5px;
+        font-size: 8px;
+        max-width: 340px;
+        margin-top: 3px;
+    }
+
+    .last{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .last img{
+        display: block;
+        padding: 15px;
+        width: 15%;
+        height: 20%;
     }
     
     .last h5{
@@ -759,19 +1011,6 @@ figure img {
     header .tel {
         width: 50px;
         font-size: 4px;
-    }
-
-    .swiper-container{
-        animation: slideAnimation 3s;
-        margin-bottom: 300px;
-    }
-    
-    .swiper-slide{
-        height: 100vh;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
     }
 
     .swiper-slide.slide1{
@@ -836,13 +1075,8 @@ figure img {
     }
     
     .text li:before {
-        content:  "";     /* 空の要素作成 */
         width:  5px;               /* 幅指定 */
         height:  5px;              /* 高さ指定 */
-        display:  inline-block;     /* インラインブロックにする */
-        background-color: #435b70;  /* 背景色指定 */
-        border-radius:  80%;        /* 要素を丸くする */
-        position:  relative;        /* 位置調整 */
         top: -1px;                  /* 位置調整 */
         margin-right: 5px;          /* 余白指定 */
     }
@@ -879,14 +1113,10 @@ figure img {
     figcaption div{
         font-size: 12px;
         font-weight: bold;
-        white-space: nowrap;
-        background-color: rgba(240, 240, 240, 0.3);
         padding: 5px 10px;
     }
     
     figcaption p{
-        line-height: 1.6;
-        background-color: rgb(253, 253, 253);
         padding: 5px 5px;
         font-size: 8px;
         max-width: 340px;
@@ -899,8 +1129,9 @@ figure img {
 
     .last img{
         padding: 3px;
-        width: 20%;
-        height: 40%;
+        width: 15%;
+        height: 35%;
+        margin-right: 10px;
     }
     
     .last h5{

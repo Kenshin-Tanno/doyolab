@@ -1,5 +1,4 @@
  const targetElement = document.querySelectorAll(".animationTarget");
-console.log("画面の高さ",window.innerHeight)
 
  document.addEventListener("scroll",function() {
     for(let i = 0; i < targetElement.length; i++){
@@ -13,7 +12,6 @@ console.log("画面の高さ",window.innerHeight)
  })
 
  const targetIntroduction = document.querySelector(".pic");
- console.log("画面の高さ",window.innerHeight)
  
   document.addEventListener("scroll",function() {
          const getElementDistance = targetIntroduction.getBoundingClientRect().
@@ -26,7 +24,6 @@ console.log("画面の高さ",window.innerHeight)
   )
 
   const targetWords = document.querySelector(".big");
- console.log("画面の高さ",window.innerHeight)
  
   document.addEventListener("scroll",function() {
          const getElementDistance = targetWords.getBoundingClientRect().
@@ -59,6 +56,9 @@ console.log("画面の高さ",window.innerHeight)
     },
   
   });
+
+  const window_width = window.innerWidth
+  console.log(window_width)
 
   const headerElement = document.getElementById('header');
 
