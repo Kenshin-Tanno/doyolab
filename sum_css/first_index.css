@@ -19,36 +19,36 @@ header {
     visibility: hidden;
     transition: 3s;
     z-index: 9999;
-  }
+}
   
-  header.active {
+header.active {
     opacity: 1;
     visibility: visible;
     transform: none;
     box-shadow: 0 2px 2px #ccc;
     background-color: #fff;
-  }
+}
   
-  header img {
+header img {
     width: 10%;
     height: 65px;
     margin-left: 20px;
-  }
+}
   
-  header nav ul {
+header nav ul {
     display: flex;
-  }
+}
   
-  header nav ul a {
+header nav ul a {
     font-size: 18px;
     padding: 10px;
-  }
+}
   
-  header nav ul li:not(:first-of-type) {
+header nav ul li:not(:first-of-type) {
     margin-left: 25px;
-  }
+}
   
-  header .tel {
+header .tel {
     white-space: nowrap;
     display: flex;
     align-items: center;
@@ -58,7 +58,7 @@ header {
     color: #fff;
     background-color: #252525;
     font-size: 16px;
-  }
+}
   
 
 .big{
@@ -555,13 +555,8 @@ figure img {
       }
 
     header img {
-        width: 10%;
         height: 20px;
         margin-left: 5px;
-    }
-        
-    header nav ul {
-        display: flex;
     }
         
     header nav ul a {
@@ -571,7 +566,6 @@ figure img {
         
     header .tel {
         width: 50px;
-        color: #fff;
         font-size: 4px;
     }
 
@@ -748,125 +742,23 @@ figure img {
 
 @media screen and (max-width: 320px){
 
-    .big .sports{
-        font-size: 15px;
-        padding: 1px;
+    header {
         height: 50px;
     }
-    .big h1{
-        font-size: 25px;
-        padding: 1px;
-        height: 50px;
-    }
-    
-    .big .future{
-        font-size: 15px;
-        padding: 1px;
-        height: 50px;
-    }
-    
-    .text li:before {
-        content:  "";     /* 空の要素作成 */
-        width:  5px;               /* 幅指定 */
-        height:  5px;              /* 高さ指定 */
-        display:  inline-block;     /* インラインブロックにする */
-        background-color: #435b70;  /* 背景色指定 */
-        border-radius:  80%;        /* 要素を丸くする */
-        position:  relative;        /* 位置調整 */
-        top: -1px;                  /* 位置調整 */
-        margin-right: 5px;          /* 余白指定 */
-    }
 
-    .text h1{
-        font-size: 8px;
-        padding: 1px;
-        margin-bottom: 2px;
+    header img {
+        height: 20px;
+        margin-left: 5px;
     }
-
-    .text br{
-        display: none;
+        
+    header nav ul a {
+        font-size: 5px;
+        padding: 3px;
     }
-    
-    .text h2{
-        margin-top: 20px;
-        font-size: 6px;
-        padding: 5px;
-    }
-
-    .text li{
+        
+    header .tel {
+        width: 50px;
         font-size: 4px;
-        padding: 2px;
-    }
-
-
-    .pic img{
-        width: 35%;
-        height: 35%;
-        padding: 1px;
-    }
-
-    .text{
-        padding: 1px;
-    }
-
-    .contents li:nth-of-type(odd){
-        float: none;
-    }
-    
-    .contents li:nth-of-type(even){
-        float: none;
-    }
-
-    figure{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    figure img {
-        border-radius: 5px;
-        display: block;          
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        box-shadow: 0px 0px 15px 0px #bebebe;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: 1s 0.2s;
-    }
-
-    figcaption {
-        display: block;
-        flex-direction: none;
-        align-items: none;
-        position: none;
-        top: 0px;
-    }
-
-    figcaption div{
-        font-size: 12px;
-        font-weight: bold;
-        white-space: nowrap;
-        background-color: rgba(240, 240, 240, 0.3);
-        padding: 5px 10px;
-        letter-spacing: 0.05em;
-        border-radius: 5px;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: 1s;
-    }
-    
-    figcaption p{
-        line-height: 1.6;
-        background-color: rgb(253, 253, 253);
-        padding: 5px 5px;
-        font-size: 8px;
-        max-width: 340px;
-        margin-top: 3px;
-        border-radius: 5px;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: 1s;
     }
 
     .swiper-container{
@@ -895,27 +787,126 @@ figure img {
         background-image: url(../images/index/slider4_iphone.jpg);
     }
 
-
-    .last{
-        display: flex;
-        height: 100%;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
+    .big .sports{
+        font-size: 15px;
+        padding: 1px;
+        height: 50px;
+    }
+    .big h1{
+        font-size: 25px;
+        padding: 1px;
+        height: 50px;
     }
     
-    .last img{
+    .big .future{
+        font-size: 15px;
+        padding: 1px;
+        height: 50px;
+    }
+
+    .pic img{
+        width: 35%;
+        height: 35%;
+        padding: 1px;
+    }
+
+    .text{
+        padding: 1px;
+    }
+
+    .text h1{
+        font-size: 8px;
+        padding: 1px;
+        margin-bottom: 2px;
+    }
+
+    .text br{
+        display: none;
+    }
+    
+    .text h2{
+        margin-top: 20px;
+        font-size: 6px;
+        padding: 5px;
+    }
+
+    .text li{
+        font-size: 4px;
+        padding: 2px;
+    }
+    
+    .text li:before {
+        content:  "";     /* 空の要素作成 */
+        width:  5px;               /* 幅指定 */
+        height:  5px;              /* 高さ指定 */
+        display:  inline-block;     /* インラインブロックにする */
+        background-color: #435b70;  /* 背景色指定 */
+        border-radius:  80%;        /* 要素を丸くする */
+        position:  relative;        /* 位置調整 */
+        top: -1px;                  /* 位置調整 */
+        margin-right: 5px;          /* 余白指定 */
+    }
+
+    .contents li:nth-of-type(odd){
+        float: none;
+    }
+    
+    .contents li:nth-of-type(even){
+        float: none;
+    }
+
+    figure{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    figure img {
+        border-radius: 5px;
+        display: block;          
+        width: 80%;
+        height: 130px;
+    }
+
+    figcaption {
         display: block;
-        padding: 10px;
+        flex-direction: none;
+        align-items: none;
+        position: none;
+        top: 0px;
+    }
+
+    figcaption div{
+        font-size: 12px;
+        font-weight: bold;
+        white-space: nowrap;
+        background-color: rgba(240, 240, 240, 0.3);
+        padding: 5px 10px;
+    }
+    
+    figcaption p{
+        line-height: 1.6;
+        background-color: rgb(253, 253, 253);
+        padding: 5px 5px;
+        font-size: 8px;
+        max-width: 340px;
+        margin-top: 3px;
+    }
+
+    .last{
+        height: 70px;
+    }
+
+    .last img{
+        padding: 3px;
         width: 20%;
-        height: 20%;
+        height: 40%;
     }
     
     .last h5{
-        display: block;
-        white-space: nowrap;
-        padding: 10px;
-        font-size: 1px;
+        padding: 3px;
+        font-size: 3px;
     }
+
     
 }

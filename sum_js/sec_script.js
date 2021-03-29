@@ -1,5 +1,4 @@
  const targetElement = document.querySelectorAll(".one");
-console.log("画面の高さ",window.innerHeight)
 
  document.addEventListener("scroll",function() {
     for(let i = 0; i < targetElement.length; i++){
@@ -13,7 +12,6 @@ console.log("画面の高さ",window.innerHeight)
  })
 
  const targetIntroduction = document.querySelector(".name");
- console.log("画面の高さ",window.innerHeight)
  
   document.addEventListener("scroll",function() {
          const getElementDistance = targetIntroduction.getBoundingClientRect().
@@ -24,3 +22,17 @@ console.log("画面の高さ",window.innerHeight)
          }
      }
   )
+  
+const headerElement = document.getElementById('header');
+
+document.addEventListener('scroll', function() {
+ const scrollY = window.pageYOffset;
+ console.log(scrollY);
+    
+    if (scrollY > 1) {
+        headerElement.classList.add('active');
+    } else {
+        headerElement.classList.remove('active');
+    }
+});
+

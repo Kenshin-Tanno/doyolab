@@ -1,25 +1,80 @@
 @charset "utf-8";
 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 90px;
+    width: 100%;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 3s;
+    z-index: 9999;
+}
+  
+header.active {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: 0 2px 2px #ccc;
+    background-color: #fff;
+}
+  
+header img {
+    width: 10%;
+    height: 65px;
+    margin-left: 20px;
+}
+  
+header nav ul {
+    display: flex;
+}
+  
+header nav ul a {
+    font-size: 18px;
+    padding: 10px;
+}
+  
+header nav ul li:not(:first-of-type) {
+    margin-left: 25px;
+}
+  
+header .tel {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 150px;
+    color: #fff;
+    background-color: #252525;
+    font-size: 16px;
+}
+
 @keyframes headerAnimation{
     0%{
         opacity: 0;
     }
 }
 
-header{
+.head{
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-header img{
+.head img{
     height: 100%;
     width: 100%;
     margin-bottom: 100px;
     animation: headerAnimation 3s;
 }
 
-header p{
+.head p{
     font-family: "Yukyokasho";
     display: flex;
     justify-content: center;
@@ -60,15 +115,15 @@ p.show{
 }
 
 figure {
-    display: inline-block;   /* インラインブロック化 */
+    display: inline-block; 
     margin: 50px;
 }
 figure img {
-    display: block;          /* 余計な余白が出ないようにする */
-    margin: 0px 0px 3px 0px; /* 下側にだけ3pxの余白を追加 */
+    display: block;   
+    margin: 0px 0px 3px 0px;
     width: 300px;
     height: 200px;
-    object-fit: cover; /* 画像のトリミング */
+    object-fit: cover;
     box-shadow: 0px 0px 15px 0px #bebebe;
 }
 figcaption {
@@ -85,13 +140,12 @@ figcaption {
 }
 
 .last{
-    background-color: rgb(238, 247, 255);
+    background-color: rgb(31, 31, 31);
     display: flex;
-    height: 60%;
+    height: 100%;
     width: 100%;
     justify-content: center;
     align-items: center;
-    font-family: sans-serif;
 }
 
 .last img{
@@ -102,34 +156,250 @@ figcaption {
 }
 
 .last h5{
+    color: #fff;
     display: block;
     white-space: nowrap;
     padding: 50px;
-    font-size: 14px;
+    font-size: 15px;
 }
 
-@media screen and (max-width: 375px){
-    
-    
-    header p{
-        font-size: 30px;
-        margin-bottom: 70px;
-        margin-top: 70px;
+
+@media screen and (max-width:1024px){
+
+    .head{
+        margin-top: 100px;
     }
 
-    header img{
-        height: 50%;
+    header img {
+        height: 40px;
+    }
+    
+    figure {
+        margin: 20px;
+    }
+
+    figure img {
+        width: 250px;
+        height: 150px;
+    }
+    figcaption {
+        width: 250px;
+        height: 50px;
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width:768px){
+
+    .head{
+        margin-top: 100px;
+    }
+
+    header img {
+        height: 40px;
+    }
+    
+    figure {
+        margin: 20px;
+    }
+
+    figure img {
+        width: 200px;
+        height: 130px;
+    }
+    figcaption {
+        width: 200px;
+        height: 50px;
+        font-size: 23px;
+    }
+
+}
+
+@media screen and (max-width: 428px){
+
+    header {
+        height: 50px;
+    }
+
+    header img {
+        height: 20px;
+        margin-left: 5px;
+    }
+        
+    header nav ul a {
+        font-size: 5px;
+        padding: 3px;
+    }
+        
+    header .tel {
+        width: 50px;
+        font-size: 4px;
+    }
+
+    .head{
+        margin-top: 200px;
+    }
+    
+    .head p{
+        font-size: 30px;
+        margin-bottom: 50px;
+        margin-top: 100px;
+    }
+
+    .head img{
+        height: 100%;
         width: 100%;
         margin-bottom: 50px;
     }
 
     .obje{
-        margin-top: 50px;
+        margin-top: 100px;
+    }
+
+    figure {
+        margin: 15px;
+    }
+
+    figure img {
+        width: 110px;
+        height: 70px;
+    }
+
+    figcaption {
+        width: 110px;
+        height: 30px;
+        font-size: 10px;
+    }
+
+    .last{
+        height: 100px;
+    }
+
+    .last img{
+        padding: 10px;
+        width: 20%;
+        height: 40%;
+    }
+    
+    .last h5{
+        padding: 10px;
+        font-size: 5px;
+    }
+
+}
+
+@media screen and (max-width: 414px){
+    
+    header {
+        height: 50px;
+    }
+
+    header img {
+        height: 20px;
+        margin-left: 5px;
+    }
+        
+    header nav ul a {
+        font-size: 5px;
+        padding: 3px;
+    }
+        
+    header .tel {
+        width: 50px;
+        font-size: 4px;
+    }
+
+    .head{
+        margin-top: 200px;
+    }
+    
+    .head p{
+        font-size: 30px;
+        margin-bottom: 50px;
+        margin-top: 100px;
+    }
+
+    .head img{
+        height: 100%;
+        width: 100%;
         margin-bottom: 50px;
     }
 
-    .one{
+    .obje{
+        margin-top: 100px;
+    }
+
+    figure {
+        margin: 15px;
+    }
+
+    figure img {
+        width: 100px;
+        height: 70px;
+    }
+
+    figcaption {
+        width: 100px;
+        height: 30px;
+        font-size: 10px;
+    }
+
+    .last{
+        height: 100px;
+    }
+
+    .last img{
+        padding: 10px;
+        width: 20%;
+        height: 40%;
+    }
+    
+    .last h5{
+        padding: 10px;
+        font-size: 5px;
+    }
+
+}
+
+@media screen and (max-width: 375px){
+
+    header {
+        height: 50px;
+    }
+
+    header img {
+        height: 20px;
+        margin-left: 5px;
+    }
+        
+    header nav ul a {
+        font-size: 5px;
+        padding: 3px;
+    }
+        
+    header .tel {
+        width: 50px;
+        font-size: 4px;
+    }
+
+    .head{
+        margin-top: 200px;
+    }
+    
+    .head p{
+        font-size: 30px;
+        margin-bottom: 10px;
+        margin-top: 100px;
+    }
+
+    .head img{
+        height: 100%;
+        width: 100%;
         margin-bottom: 50px;
+    }
+
+    .obje{
+        margin-top: 100px;
     }
 
     figure {
@@ -137,31 +407,29 @@ figcaption {
     }
 
     figure img {
-        width: 80px;
-        height: 40px;
+        width: 100px;
+        height: 70px;
     }
 
     figcaption {
-        width: 80px;
+        width: 100px;
         height: 30px;
         font-size: 10px;
     }
 
     .last{
-        height: 80px;
-        width: 100%;
+        height: 100px;
     }
 
     .last img{
-        padding: 5px;
+        padding: 10px;
         width: 20%;
-        height: 20%;
+        height: 40%;
     }
     
     .last h5{
-        padding: 5px;
+        padding: 10px;
         font-size: 5px;
     }
-
 
 }
