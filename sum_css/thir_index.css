@@ -1,64 +1,133 @@
-logo img{
-    display: block;
-    width: 150px;
-    height: 150px;
-    object-fit: cover; /* 画像のトリミング */
-}
-logotohome img{
-    display: block;
-    width: 100px;
-    height: 100px;
-    object-fit: cover; /* 画像のトリミング */
-}
+@charset "utf-8";
 
-/* トップページの一覧に関するスタイル----------------------------------------------*/
-figure {
-    display: inline-block;   /* インラインブロック化 */
-    margin: 0px 3px 7px 0px; /* 外側に余白を追加(※右に3px・下に7px) */
-    background-color: #f6faff; 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 90px;
+    width: 100%;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 3s;
+    z-index: 9999;
 }
-figure img {
-    display: block;          /* 余計な余白が出ないようにする */
-    margin: 0px 0px 3px 0px; /* 下側にだけ3pxの余白を追加 */
-    width: 200px;
-    height: 200px;
-    object-fit: cover; /* 画像のトリミング */
+  
+header.active {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: 0 2px 2px #ccc;
+    background-color: #fff;
 }
-figcaption {
+  
+header img {
+    width: 10%;
+    height: 65px;
+    margin-left: 20px;
+}
+  
+header nav ul {
+    display: flex;
+}
+  
+header nav ul a {
+    font-size: 18px;
+    padding: 10px;
+}
+  
+header nav ul li:not(:first-of-type) {
+    margin-left: 25px;
+}
+  
+header .tel {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     width: 150px;
-    height: 80px;
-    font-size: 0.9em;        /* 文字サイズを90%に */
-    text-align: center;      /* 中身をセンタリング */
-    word-wrap: break-word;
+    color: #fff;
+    background-color: #252525;
+    font-size: 16px;
 }
-/* ---------------------------------------------------------------------------*/
-
 
 /* ========== common ========== */
-html, body {
-	font-size: 16px;
+.body {
+    margin-top: 10px;
+    margin-bottom: 10px;
 	font-family: "Gill Sans", sans-serif;
-	color: #37383a;
-    margin-left: 15px;
-    margin-bottom: 40px;
-	background: #f7fbff;
+	color: #000000;
+    margin: 50px;
 }
+
 h1{
     text-indent: 0em;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 50px;
 }
+
 h2{
-    margin-left: 2em;
-    margin-top: 2em;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    font-size: 25px;
+    font-weight: bold;
 }
+
 h3{
-    margin-left: 3em;
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
-p,div{
-    margin-left: 5em;
+
+img{
+    margin-left: 55px;
+    margin-bottom: 10px;
 }
-span.blackback{
-    text-indent: 6em;
+
+p{
+    margin-left: 55px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.blackback{
+    margin-top: 30px;
+    font-size: 16px;
+    margin-bottom: 50px;
+    margin-left: 50px;
     background: #273250;
     color: #fff4f7;
 }
 
+.last{
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.last img{
+    display: block;
+    padding: 50px;
+    width: 20%;
+    height: 20%;
+}
+
+.last h5{
+    color: #fff;
+    display: block;
+    white-space: nowrap;
+    padding: 50px;
+    font-size: 15px;
+}

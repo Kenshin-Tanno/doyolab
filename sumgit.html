@@ -5,142 +5,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GitHubの始め方</title>
     
-    <link rel="stylesheet" href="sum_css/mine.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="sum_css/thir_index.css">
+    <script src="sum_js/thir_script.js" defer></script>
 </head>
 
 
 <body>
-    <!--ホームに帰るためのボタン-->
-    <logotohome>
-    <a href="index.html"><img src="images/tamio2.png" alt=""></a>
-    </logotohome>
+    <header id="header">
+        <img src="images/index/TAMIO10.png" alt="tamiologo">
+        <nav>
+          <ul>
+            <a href="index.html">Home</a>
+            <a href="arduino.html">Arduino(0)</a>
+            <a href="python.html">Python(0)</a>
+            <a href="vsc.html">HTML(0)</a>
+            <a href="fab.html">FAB(0)</a>
+          </ul>
+        </nav>
+        <div class="tel">ようこそ☺︎</div>
+    </header>
 
-    <!--h1は見出し１（大見出し）-->
-    <h1>GitHubの始め方（超初心者向け/Mac）</h1>
-        <!--h2は見出し2（中見出し）-->
+    <ul class="body">
+
+        <h1>GitHubの始め方（超初心者向け/Mac）</h1>
+
         <h2>■前準備</h2>
-            <!--h3は見出し3（小見出し）-->
             <h3>Gitの確認</h3>
-            <!--pは段落-->
-            <p>
-                <img src="images/0322/9.png" width="60%"><br>
-                ①ターミナルを開いて、gitがあるかを確認。
-                <br><!--brは改行-->
-                　<span class="blackback">
-                    git --version
+            <img src="images/0322/9.png" width="60%"><br>
+                <p>
+                    ①ターミナルを開いて、gitがあるかを確認。<br>
+                </p>
+
+            　  <span class="blackback">
+                git --version
                 </span>
-            </p>
+
         <h2>■Gitの初期設定</h2>
             <h3>フォルダの作成</h3>
-                    <p>
-                        ②mkdir mygitでディレクトリを作成。<br>
-                    <span class="blackback">
-                        mkdir mygit
-                    </span>
-                    </p>
+                <p>
+                    ②mkdir mygitでディレクトリを作成。<br>
+                </p>
+                <span class="blackback">
+                    mkdir mygit
+                </span>
 
             <h3>gitの設定</h3>
-            <p>
-                ③④⑤初期設定のために、以下を順番に打ち込む。<br>
+                <p>
+                    ③④⑤初期設定のために、以下を順番に打ち込む。<br>
+                </p>
                 <span class="blackback">
-                    git init<br>
-                    git config --global user.email "メアド"<br>
+                    git init<br><br>
+                </span>
+                <span class="blackback">
+                    git config --global user.email "メアド"<br><br>
+                </span>
+                <span class="blackback">
                     git config --global user.name "名前（アルファベット）"
                 </span>
-            </p>
-            <h2>■GitHubの設定</h2>
-                <h3>リポジトリーの作成</h3>
-                    <p>①右上のプラスのところから、New repositoryを開く。<br>
-                        <img src="images/0322/1.png" width="60%">
+                    
 
-                    </p>
-                    <p>②画像の通りに入力・選択する。<br>
-                        <img src="images/0322/2.png" width="60%">
+        <h2>■GitHubの設定</h2>
+            <h3>リポジトリーの作成</h3>
+                <p>
+                    ①右上のプラスのところから、New repositoryを開く。<br>
+                    <img src="images/0322/1.png" width="60%"><br>
+                    
+                    ②画像の通りに入力・選択する。<br>
+                    <img src="images/0322/2.png" width="60%"><br>
 
-                    </p>
-                    <p>
-                        ③この画面から、Sttingを選択する。<br>
-                        <img src="images/0322/3.png" width="60%">
-                    </p>
-                    <p>
-                        ④下の方にスクロールしていき、mainを選択してsaveを押す。<br>
-                        <img src="images/0322/4.png" width="60%">
-                    </p>
+                    ③この画面から、Sttingを選択する。<br>
+                    <img src="images/0322/3.png" width="60%"><br>
+
+                    ④下の方にスクロールしていき、mainを選択してsaveを押す。<br>
+                    <img src="images/0322/4.png" width="60%"><br>
+                </p>
+
         <h2>アクセストークンを作成</h2>
             <p>
                 ①右上から、Settingに移動<br>
                 <img src="images/0322/5.png" width="60%"><br>
-            </p>
-            
-            <p>
+
                 ②Developer Settingへ移動<br>
                 <img src="images/0322/6.png" width="60%"><br>
-            </p>
 
-            <p>
                 ③Personal access tokenへ移動<br>
                 <img src="images/0322/7.png" width="60%"><br>
-            </p>
 
-            <p>
                 ③そしてここで作成<br>
                 <img src="images/0322/8.png" width="60%"><br>
             </p>
 
         <h2>■リポジトリーをクローン</h2>
             <h3>gitのURLをコピー</h3>
-            <p>
-                緑色のボタンを押して、画像の通りにコードをコピー。<br>
-                <img src="images/0322/12.png" width="60%">
-            </p>
+                <p>
+                    緑色のボタンを押して、画像の通りにコードをコピー。<br>
+                    <img src="images/0322/12.png" width="60%">
+                </p>
+
             <h3>mygitに移動</h3>
-            <p>
-                <img src="images/0322/11.png" width="60%">
-                再びターミナルで下記を入力。cdはchange directoryの略。<br>
-                <span class="blackback">
-                    cd mygit
-                </span>
-            </p>
+                <p>
+                    <img src="images/0322/11.png" width="60%">
+                    再びターミナルで下記を入力。cdはchange directoryの略。<br>
+                        <span class="blackback">
+                            cd mygit
+                        </span>
+                </p>
+
             <h3>リポジトリをクローンする</h3>
-            <p>
-                さらに下記を入力し、先ほどコピーしたものをペーストする。<br>
-                <span class="blackback">
-                    git clone リポジトリのURL
-                </span>
-            </p>
+                <p>
+                    さらに下記を入力し、先ほどコピーしたものをペーストする。<br>
+                    <span class="blackback">
+                        git clone リポジトリのURL
+                    </span>
+                </p>
+                
             <h3>チェック</h3>
-            <p>mygitの中にdoyolabというフォルダができて、doyolabフォルダの中にREADME.mdファイルが入っていれば成功。
-    
+                <p>
+                    mygitの中にdoyolabというフォルダができて、doyolabフォルダの中にREADME.mdファイルが入っていれば成功。
+                </p>
+
         <h2>■運用</h2>
             <h3>ファイルを追加、変更したら</h3>
-            <p>
-                <img src="images/0322/10.png" width="60%"><br><br>
-                VSコードを、セーブしたことを確認して、画像の通り入力する。<br><br>
-                
-                ・<span class="blackback">
-                    cd mygit/doyolab
-                </span>
-                <br>
-                一度ターミナルを閉じている場合は、上記を先に入力してから行う。<br><br>
+                <p>
+                    <img src="images/0322/10.png" width="60%"><br><br>
+                    VSコードを、セーブしたことを確認して、画像の通り入力する。<br><br>
+                    
+                    ・<span class="blackback">
+                        cd mygit/doyolab
+                    </span><br>
 
-                ①<span class="blackback">
-                    git add .
-                </span>
-                <br>
-                ②<span class="blackback">
-                    git status
-                </span>
-                （どちらでも良い）
-                <br>
-                ③<span class="blackback">
-                    git commit -m"メッセージ"
-                </span>
-                ※これをしっかり更新した日付にすること。
-                <br>
-                ④<span class="blackback">
-                    git push
-                </span>
-            </p>
-                
+                    一度ターミナルを閉じている場合は、上記を先に入力してから行う。<br><br>
 
+                    ①<span class="blackback">
+                        git add .
+                    </span><br>
+
+                    ②<span class="blackback">
+                        git status
+                    </span>
+                    （どちらでも良い）<br>
+
+                    ③<span class="blackback">
+                        git commit -m"メッセージ"
+                    </span>
+                    ※これをしっかり更新した日付にすること。<br>
+
+                    ④<span class="blackback">
+                        git push
+                    </span>
+                </p>
+    </ul>
+
+    
+
+    <ul class="last">
+        <img src="images/index/TAMIO.png" alt="">
+        <h5>Thank you for visiting. See you soon...<br>©Kenshin Tanno</h5>
+    </ul>
+                
 </body>
