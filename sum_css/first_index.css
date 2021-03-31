@@ -31,8 +31,7 @@ header.active {
   
 header img {
     width: 10%;
-    height: 65px;
-    margin-left: 20px;
+    margin-left: 50px;
 }
   
 header nav ul {
@@ -278,8 +277,7 @@ figure img {
 .last img{
     display: block;
     padding: 50px;
-    width: 20%;
-    height: 20%;
+    width: 15%;
 }
 
 .last h5{
@@ -315,10 +313,6 @@ figure img {
 }
 
 @media screen and (max-width: 1024px){
-
-    header img {
-        height: 45px;
-    }
 
     .swiper-slide{
         height: 100vh;
@@ -400,10 +394,7 @@ figure img {
     }
 
     .last img{
-        display: block;
         padding: 30px;
-        width: 20%;
-        height: 20%;
     }
     
     .last h5{
@@ -418,8 +409,8 @@ figure img {
 
 @media screen and (max-width: 768px){
 
-    header img {
-        height: 45px;
+    header img{
+        width: 12%;
     }
         
     header nav ul a {
@@ -504,14 +495,6 @@ figure img {
     .swiper-slide.slide4{
         background-image: url(../images/index/slide4_ipad.jpg);
     }
-
-
-    .last img{
-        display: block;
-        padding: 30px;
-        width: 20%;
-        height: 20%;
-    }
     
     .last h5{
         display: block;
@@ -526,12 +509,10 @@ figure img {
 
     header {
         height: 50px;
-      }
+    }
 
-    header img {
-        height: 55%;
-        width: 15%;
-        margin-left: 10px;
+    header img{
+        margin-left: 20px;
     }
         
     header nav ul a {
@@ -666,10 +647,7 @@ figure img {
     }
     
     .last img{
-        display: block;
-        padding: 15px;
         width: 20%;
-        height: 20%;
     }
     
     .last h5{
@@ -687,9 +665,7 @@ figure img {
       }
 
     header img {
-        height: 55%;
-        width: 15%;
-        margin-left: 10px;
+        margin-left: 20px;
     }
         
     header nav ul a {
@@ -824,10 +800,8 @@ figure img {
     }
     
     .last img{
-        display: block;
         padding: 15px;
         width: 20%;
-        height: 20%;
     }
     
     .last h5{
@@ -845,9 +819,8 @@ figure img {
       }
 
     header img {
-        height: 22px;
-        width: 10%;
-        margin-left: 10px;
+        width: 12%;
+        margin-left: 15px;
     }
         
     header nav ul a {
@@ -861,7 +834,7 @@ figure img {
     }
 
     .swiper-slide{
-        height: 95vh;
+        height: 100vh;
     }
 
     .swiper-slide.slide1{
@@ -982,10 +955,8 @@ figure img {
     }
     
     .last img{
-        display: block;
         padding: 15px;
         width: 20%;
-        height: 28%;
     }
     
     .last h5{
@@ -1004,7 +975,6 @@ figure img {
     }
 
     header img {
-        height: 20px;
         margin-left: 5px;
     }
         
@@ -1133,10 +1103,7 @@ figure img {
     }
 
     .last img{
-        padding: 3px;
         width: 15%;
-        height: 35%;
-        margin-right: 10px;
     }
     
     .last h5{

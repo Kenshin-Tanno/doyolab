@@ -26,8 +26,7 @@ header.active {
   
 header img {
     width: 10%;
-    height: 65px;
-    margin-left: 20px;
+    margin-left: 50px;
 }
   
 header nav ul {
@@ -57,54 +56,34 @@ header .tel {
 
 /* ========== common ========== */
 .body {
-    margin-top: 10px;
-    margin-bottom: 10px;
-	font-family: "Gill Sans", sans-serif;
-	color: #000000;
-    margin: 50px;
+	font-size: 16px;
+	font-family: sans-serif;
+	color: #393939;
+    margin: 40px 20px 40px 30px;
+	background: #ffffff;
 }
 
 h1{
     text-indent: 0em;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 50px;
 }
-
 h2{
-    margin-left: 30px;
-    margin-bottom: 30px;
-    margin-top: 50px;
-    font-size: 25px;
-    font-weight: bold;
+    margin-left: 2em;
+    margin-top: 2em;
 }
-
 h3{
-    margin-top: 20px;
-    margin-left: 40px;
-    font-size: 20px;
-    margin-bottom: 10px;
-    font-weight: bold;
+    margin-left: 3em;
 }
-
-img{
-    margin-left: 55px;
-    margin-bottom: 10px;
-}
-
 p{
-    margin-left: 55px;
-    margin-bottom: 10px;
-    font-size: 16px;
+    margin-left: 5em;
 }
-
-.blackback{
-    margin-top: 30px;
-    font-size: 16px;
-    margin-bottom: 50px;
-    margin-left: 50px;
-    background: #273250;
-    color: #fff4f7;
+img{
+    margin: 10px 0px 10px 0px;
+}
+span.blackback{
+    margin-left: 3px;
+    text-indent: 4em;
+    background: #393939;
+    color: #efefef;
 }
 
 .last{
@@ -121,7 +100,6 @@ p{
     display: block;
     padding: 50px;
     width: 20%;
-    height: 20%;
 }
 
 .last h5{

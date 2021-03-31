@@ -26,8 +26,7 @@ header.active {
   
 header img {
     width: 10%;
-    height: 65px;
-    margin-left: 20px;
+    margin-left: 50px;
 }
   
 header nav ul {
@@ -152,7 +151,6 @@ figcaption {
     display: block;
     padding: 50px;
     width: 20%;
-    height: 20%;
 }
 
 .last h5{
@@ -167,17 +165,9 @@ figcaption {
 @media screen and (max-width:1024px){
 
     .head{
-        margin-top: 100px;
-    }
-
-    header img {
-        height: 40px;
-    }
-    
-    .head{
         margin-top: 350px;
     }
-
+    
     .head p{
         margin-top: 350px;
     }
@@ -186,10 +176,6 @@ figcaption {
         margin: 20px;
     }
 
-    figure img {
-        width: 250px;
-        height: 150px;
-    }
     figcaption {
         width: 250px;
         height: 50px;
@@ -199,14 +185,6 @@ figcaption {
 
 @media screen and (max-width:768px){
 
-    .head{
-        margin-top: 100px;
-    }
-
-    header img {
-        height: 40px;
-    }
-    
     .head{
         margin-top: 300px;
     }
@@ -237,9 +215,9 @@ figcaption {
         height: 50px;
     }
 
-    header img {
-        height: 50%;
-        margin-left: 10px;
+    header img{
+        width: 12%;
+        margin-left: 20px;
     }
         
     header nav ul a {
@@ -293,13 +271,11 @@ figcaption {
 
     .last img{
         padding: 10px;
-        width: 20%;
-        height: 40%;
     }
     
     .last h5{
         padding: 10px;
-        font-size: 5px;
+        font-size: 8px;
     }
 
 }
@@ -310,11 +286,6 @@ figcaption {
         height: 50px;
     }
 
-    header img {
-        height: 20px;
-        margin-left: 5px;
-    }
-        
     header nav ul a {
         font-size: 8px;
         padding: 3px;
@@ -366,8 +337,6 @@ figcaption {
 
     .last img{
         padding: 10px;
-        width: 20%;
-        height: 40%;
     }
     
     .last h5{
@@ -382,11 +351,6 @@ figcaption {
     header {
         height: 50px;
     }
-
-    header img {
-        height: 20px;
-        margin-left: 5px;
-    }
         
     header nav ul a {
         font-size: 8px;
@@ -399,13 +363,13 @@ figcaption {
     }
 
     .head{
-        margin-top: 300px;
+        margin-top: 250px;
     }
     
     .head p{
         font-size: 30px;
         margin-bottom: 10px;
-        margin-top: 200px;
+        margin-top: 250px;
     }
 
     .head img{
@@ -419,7 +383,7 @@ figcaption {
     }
 
     figure {
-        margin: 10px;
+        margin: 5px;
     }
 
     figure img {
@@ -439,8 +403,6 @@ figcaption {
 
     .last img{
         padding: 10px;
-        width: 20%;
-        height: 40%;
     }
     
     .last h5{

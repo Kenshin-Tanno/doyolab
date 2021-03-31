@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GitHubの始め方</title>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="sum_css/thir_index.css">
     <script src="sum_js/thir_script.js" defer></script>
@@ -22,6 +21,7 @@
             <a href="python.html">Python(0)</a>
             <a href="vsc.html">HTML(0)</a>
             <a href="fab.html">FAB(0)</a>
+            <a href="fab.html">etc(1)</a>
           </ul>
         </nav>
         <div class="tel">ようこそ☺︎</div>
@@ -33,37 +33,36 @@
 
         <h2>■前準備</h2>
             <h3>Gitの確認</h3>
-            <img src="images/0322/9.png" width="60%"><br>
                 <p>
+                    <img src="images/0322/9.png" width="60%"><br>
                     ①ターミナルを開いて、gitがあるかを確認。<br>
+                    <span class="blackback">
+                        git --version
+                        </span>
                 </p>
-
-            　  <span class="blackback">
-                git --version
-                </span>
 
         <h2>■Gitの初期設定</h2>
             <h3>フォルダの作成</h3>
                 <p>
                     ②mkdir mygitでディレクトリを作成。<br>
+                    <span class="blackback">
+                        mkdir mygit
+                    </span>
                 </p>
-                <span class="blackback">
-                    mkdir mygit
-                </span>
 
             <h3>gitの設定</h3>
                 <p>
                     ③④⑤初期設定のために、以下を順番に打ち込む。<br>
+                    <span class="blackback">
+                        git init<br><br>
+                    </span>
+                    <span class="blackback">
+                        git config --global user.email "メアド"<br><br>
+                    </span>
+                    <span class="blackback">
+                        git config --global user.name "名前（アルファベット）"
+                    </span>
                 </p>
-                <span class="blackback">
-                    git init<br><br>
-                </span>
-                <span class="blackback">
-                    git config --global user.email "メアド"<br><br>
-                </span>
-                <span class="blackback">
-                    git config --global user.name "名前（アルファベット）"
-                </span>
                     
 
         <h2>■GitHubの設定</h2>
@@ -71,13 +70,19 @@
                 <p>
                     ①右上のプラスのところから、New repositoryを開く。<br>
                     <img src="images/0322/1.png" width="60%"><br>
-                    
+                </p>
+
+                <p>
                     ②画像の通りに入力・選択する。<br>
                     <img src="images/0322/2.png" width="60%"><br>
+                </p>
 
+                <p>
                     ③この画面から、Sttingを選択する。<br>
                     <img src="images/0322/3.png" width="60%"><br>
+                </p>
 
+                <p>
                     ④下の方にスクロールしていき、mainを選択してsaveを押す。<br>
                     <img src="images/0322/4.png" width="60%"><br>
                 </p>
@@ -86,44 +91,51 @@
             <p>
                 ①右上から、Settingに移動<br>
                 <img src="images/0322/5.png" width="60%"><br>
+            </p>
 
+            <p>
                 ②Developer Settingへ移動<br>
                 <img src="images/0322/6.png" width="60%"><br>
+            </p> 
 
+            <p>
                 ③Personal access tokenへ移動<br>
                 <img src="images/0322/7.png" width="60%"><br>
+            </p> 
 
+            <p>
                 ③そしてここで作成<br>
                 <img src="images/0322/8.png" width="60%"><br>
-            </p>
+            </p> 
+            
 
         <h2>■リポジトリーをクローン</h2>
             <h3>gitのURLをコピー</h3>
                 <p>
                     緑色のボタンを押して、画像の通りにコードをコピー。<br>
-                    <img src="images/0322/12.png" width="60%">
+                    <img src="images/0322/12.png" width="60%"><br>
                 </p>
 
             <h3>mygitに移動</h3>
                 <p>
-                    <img src="images/0322/11.png" width="60%">
+                    <img src="images/0322/11.png" width="60%"><br>
                     再びターミナルで下記を入力。cdはchange directoryの略。<br>
-                        <span class="blackback">
-                            cd mygit
-                        </span>
+                    <span class="blackback">
+                        cd mygit
+                    </span>
                 </p>
 
             <h3>リポジトリをクローンする</h3>
                 <p>
                     さらに下記を入力し、先ほどコピーしたものをペーストする。<br>
-                    <span class="blackback">
-                        git clone リポジトリのURL
-                    </span>
                 </p>
+                <span class="blackback">
+                    git clone リポジトリのURL
+                </span>
                 
             <h3>チェック</h3>
                 <p>
-                    mygitの中にdoyolabというフォルダができて、doyolabフォルダの中にREADME.mdファイルが入っていれば成功。
+                    mygitの中にdoyolabというフォルダができて、doyolabフォルダの中にREADME.mdファイルが入っていれば成功。<br>
                 </p>
 
         <h2>■運用</h2>
@@ -131,31 +143,41 @@
                 <p>
                     <img src="images/0322/10.png" width="60%"><br><br>
                     VSコードを、セーブしたことを確認して、画像の通り入力する。<br><br>
-                    
+                </p>
+
+                <p>
                     ・<span class="blackback">
                         cd mygit/doyolab
                     </span><br>
-
                     一度ターミナルを閉じている場合は、上記を先に入力してから行う。<br><br>
+                </p>    
 
+                <p>
                     ①<span class="blackback">
                         git add .
                     </span><br>
+                </p> 
 
+                 <p>
                     ②<span class="blackback">
                         git status
                     </span>
                     （どちらでも良い）<br>
+                 </p>  
 
+                 <p>
                     ③<span class="blackback">
                         git commit -m"メッセージ"
                     </span>
                     ※これをしっかり更新した日付にすること。<br>
+                 </p>
 
+                 <p>
                     ④<span class="blackback">
                         git push
                     </span>
-                </p>
+                 </p>
+                
     </ul>
 
     
@@ -166,3 +188,4 @@
     </ul>
                 
 </body>
+</html>
