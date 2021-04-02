@@ -81,6 +81,7 @@ p{
     margin: 10px 0px 10px 0px;
     border: 2px #252525 solid;
 }
+
 .blackback{
     margin-left: 3px;
     text-indent: 4em;
@@ -177,5 +178,20 @@ p{
     .bobody {
         font-size: 12px;
         margin: 0px 0px 0px 0px;
+    }
+
+    .back{
+        background-color: rgba(0, 0, 0,0.8);
+        display: flex;
+        width: 50%;
+        margin-left: 100px;
+    }
+    
+    .code{
+        white-space: nowrap;
+        color: #fff;
+        margin-left: 30px;
+        margin-top: 20px;
+    
     }
 }
