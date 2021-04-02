@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>muscle sensor</title>
+        
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="sum_css/thir_index.css">
+        <script src="sum_js/thir_script.js" defer></script>
+    </head>
+
+<body>
+    <header id="header">
+        <img src="images/index/TAMIO10.png" alt="tamiologo">
+        <nav>
+          <ul>
+            <a href="index.html">Home</a>
+            <a href="arduino.html">Arduino</a>
+            <a href="python.html">Python</a>
+            <a href="vsc.html">HTML</a>
+            <a href="fab.html">FAB</a>
+            <a href="fab.html">etc</a>
+          </ul>
+        </nav>
+        <div class="tel">ようこそ☺︎</div>
+    </header>
+
+    <ul class="bobody">
+
+        <h1>MyoWare筋電センサーの使い方</h1>
+
+        <br>
+        &emsp; 今回は、MyoWareの筋電センサーをArduinoで動かしていきたいと思います。<br>
+        <br>
+
+        <h2>■今日のゴール</h2>
+            <h3>・Arduino</h3>
+                <p>
+                    <img src="images/emg/1_g_d.jpeg"  width="20%" alt="Implement"><br>
+                </p>
+            <h3>・グラフ</h3>
+                <p>
+                    <img src="images/emg/2_g_p.png" width="60%" alt="Graphic"><br>
+                </p>
+
+        <h2>■使用する機材</h2>
+                <br>
+                <p>
+                <b>・Arduino Uno</b>  <br>
+                <b>・筋電センサ</b>  <br>
+                &emsp; <a href="https://www.switch-science.com/catalog/2682/">購入したサイトはここ</a> <br>
+                <b>・ジャンパーワイヤ</b>  <br>
+                </p>
+        
+        <h2>■配線</h2>
+            <h3>・Arduino</h3>
+                <p>
+                    <img src="images/emg/3_c_a.jpeg" width="20%" alt="Connect with Arduino"><br>
+                    Arduino側の、5VとGNDとA0に繋ぎます。 <br>
+                </p>
+                <p>
+                    <img src="images/emg/4_c_m.jpeg" width="20%" alt="Connect with EMG"><br>
+                    筋電センサ側に、<br>
+                    ・5V　👉　プラス<br>
+                    ・GND　👉　マイナス<br>
+                    ・A0　👉　SIG<br>
+                </p>
+        
+        <h2>■プログラム</h2>
+        <h3>・全て</h3>
+            <p>
+                <div class="back">
+                    <div class="code">
+                        void setup() {<br>
+                        &emsp;    Serial.begin(9600);<br>
+                        }<br><br>
+                      
+                        void loop() {<br>
+                        &emsp;    // read the input on analog pin 0:<br>
+                        &emsp;    int sensorValue = analogRead(A0);<br>
+                        &emsp;    // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 5V):<br>
+                        &emsp;    float voltage = sensorValue * (5.0 / 1023.0);<br>
+                        &emsp;    // print out the value you read:<br>
+                        &emsp;    //Serial.println(sensorValue);<br>
+                        &emsp;    Serial.println(voltage);<br>
+                        &emsp;    delay(10);<br>
+                        }<br><br>
+                    </div>  
+                </div>
+            </p>
+        
+        <h3>・解説</h3>
+            <p>
+                ①<span class="blackback">
+                    Serial.begin(9600);
+                </span><br>
+                &emsp;シリアルを9600に指定する。
+            </p>
+
+            <p>
+                ②<span class="blackback">
+                    int sensorValue = analogRead(A0);
+                </span><br>
+                &emsp;先程のA0をここで読み込み、sensorValueの箱に入れる。
+            </p>
+
+            <p>
+                ③<span class="blackback">
+                    float voltage = sensorValue * (5.0 / 1023.0);
+                </span><br>
+                &emsp;読み込んだ値を、0-5Vに変換してvoltageの箱に入れる。
+            </p>
+
+            <p>
+                ④<span class="blackback">
+                    Serial.println(voltage);
+                </span><br>
+                &emsp;シリアルにvoltageを書き出す。
+            </p>
+
+            <p>
+                ⑤<span class="blackback">
+                    delay(10);
+                </span><br>
+                &emsp;delayで書き出す頻度を制御する。
+            </p>
+
+        <h2>■Arduinoに書き込む</h2>
+        <h3>・ボード設定</h3>
+            <p>
+                <img src="images/emg/6.png" width="50%" alt="bord operation"><br>
+                　左上のツールを開いて、画像の通りにボードをArduino Unoに設定する。
+            </p>
+        
+        <h3>・シリアルポート設定</h3>
+            <p>
+                <img src="images/emg/7.png" width="50%" alt="port setting"><br>
+                　次に、シリアルポートもArduino Unoに設定する。
+            </p>
+        
+        <h3>・書き込み</h3>
+            <p>
+                <img src="images/emg/8.png" width="50%" alt="writing"><br>
+                　最後に書き込みボタンを押す。
+            </p>
+        
+        <h2>■グラフを見る</h2>
+        <h3>・シリアルプロッタ</h3>
+            <p>
+                <img src="images/emg/9.png" width="50%" alt="plot"><br>
+                　ツールからプロッタを選択する。
+            </p>
+        
+        <h2>■完成</h2>
+        <h3>・Arduino</h3>
+                <p>
+                    <img src="images/emg/1_g_d.jpeg"  width="20%" alt="Implement"><br>
+                </p>
+            <h3>・グラフ</h3>
+                <p>
+                    <img src="images/emg/2_g_p.png" width="60%" alt="Graphic"><br>
+                </p>
+        
+            <p>
+            これで筋電値が取れるようになりました。<br><br>
+            この筋電について詳細を知りたい方は、<br>
+            <a href="http://cdn.sparkfun.com/datasheets/Sensors/Biometric/MyowareUserManualAT-04-001.pdf">ここに</a>
+            飛んでみてください。<br><br><br><br><br><br>
+
+            Fin.
+            </p>
+            
+        
+                
+    </ul>
+
+    
+    <ul class="last">
+        <img src="images/index/TAMIO.png" alt="">
+        <h5>Thank you for visiting. See you soon...<br>©Kenshin Tanno</h5>
+    </ul>
+
+
+</body>
+</html>

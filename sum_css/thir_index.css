@@ -35,7 +35,7 @@ header nav ul {
   
 header nav ul a {
     font-size: 18px;
-    padding: 10px;
+    padding: 20px;
 }
   
 header nav ul li:not(:first-of-type) {
@@ -76,14 +76,31 @@ h3{
 p{
     margin-left: 5em;
 }
-img{
+
+.bobody img{
     margin: 10px 0px 10px 0px;
+    border: 2px #252525 solid;
 }
-span.blackback{
+.blackback{
     margin-left: 3px;
     text-indent: 4em;
     background: #393939;
     color: #efefef;
+}
+
+.back{
+    background-color: rgba(0, 0, 0,0.8);
+    display: flex;
+    width: 50%;
+    margin-left: 100px;
+}
+
+.code{
+    white-space: nowrap;
+    color: #fff;
+    margin-left: 30px;
+    margin-top: 20px;
+
 }
 
 .last{

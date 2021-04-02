@@ -40,7 +40,7 @@ header nav ul {
   
 header nav ul a {
     font-size: 18px;
-    padding: 10px;
+    padding: 20px;
 }
   
 header nav ul li:not(:first-of-type) {
