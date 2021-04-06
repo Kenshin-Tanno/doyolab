@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>auto log to insta</title>
+        
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="sum_css/thir_index.css">
+        <script src="sum_js/thir_script.js" defer></script>
+    </head>
+
+<body>
+    <header id="header">
+        <img src="images/index/TAMIO10.png" alt="tamiologo">
+        <nav>
+          <ul>
+            <a href="index.html">Home</a>
+            <a href="arduino.html">Arduino</a>
+            <a href="python.html">Python</a>
+            <a href="vsc.html">HTML</a>
+            <a href="fab.html">FAB</a>
+            <a href="fab.html">etc</a>
+          </ul>
+        </nav>
+        <div class="tel">ようこそ☺︎</div>
+    </header>
+
+    <ul class="bobody">
+
+        <h1>インスタに自動でログインする方法</h1>
+
+        <br>
+        &emsp; 今回は、インスタに自動でログインします。<br>
+        <br>
+
+        <h2>■今日のゴール</h2>
+            <h3>・ログイン</h3>
+                <p>
+                    <img src="images/python/log_insta/fin.png"  width="60%" alt="goal"><br>
+                </p>
+            <h3>・コード</h3>
+                <p>
+                    <img src="images/python/log_insta/code.png"  width="60%" alt="program"><br>
+                </p>
+
+        <h2>■使用するソフト</h2>
+                <br>
+                <p>
+                <b>・Pycharm</b>  <br>
+                <b>・Google Chrome</b>  <br>
+                </p>
+        
+        <h2>■インストール</h2>
+
+            <h3>・Chromedriver_binary</h3>
+                <h4>▶︎Google Chrome バージョン確認</h4>
+                <p>
+                     これをインストールする前に、Google Chromeのバージョンを確認する必要があります。<br>
+                </p>
+                <p>
+                    <img src="images/python/log_insta/1.png" width="80%" alt="..."><br>
+                    ①Google Chromeを開いて、右上の赤丸を押す。<br>
+                </p>
+                <p>
+                    <img src="images/python/log_insta/2.png" width="60%" alt="Connect with EMG"><br>
+                    ②ヘルプをのところに行き、Google Chromeについてを見る。<br>
+                </p>
+                <p>
+                    <img src="images/python/log_insta/3.png" width="60%" alt="Connect with EMG"><br>
+                    ③それぞれのバージョンを確認する。<br>
+                </p>
+
+                <h4>▶︎インストール</h4>
+                <p>
+                    <img src="images/python/log_insta/4.png" width="60%" alt="Connect with EMG"><br>
+                    ①PyCharmを開いて、Preferenceに行く。<br>
+                </p>
+                <p>
+                    <img src="images/python/log_insta/5.png" width="40%" alt="..."><br>
+                    ②左下のプラスボタンを押す。<br>
+                </p>
+                <p>
+                    <img src="images/python/log_insta/6.png" width="60%" alt="Connect with EMG"><br>
+                    ③chromedriver_binaryと入れて選択。<br>
+                </p>
+                <p>
+                    <img src="images/python/log_insta/7.png" width="60%" alt="..."><br>
+                    ④赤丸のところのチェックボタンを押す。<br>
+                </p>
+                <p>
+                    <img src="images/python/log_insta/9.png" width="60%" alt="Connect with EMG"><br>
+                    ⑤先ほど確認した、バージョンを選択する。<br>
+                </p>
+                <p>
+                    ⑥選択して、インストールをクリック。<br>
+                </p>
+            
+            <h3>・Selenium</h3>
+            <p>
+                上記のPreferenceに行くところから、同文（seleniumと入れてインストール)。<br>
+            </p>
+        
+        <h2>■Xpath取得方法</h2>
+            <p>
+                これは後に必要になります。今は飛ばして後で戻って来ても良いと思います。<br>
+            </p>
+            <p>
+                <img src="images/python/log_insta/10.png" width="80%" alt="..."><br>
+                ①右クリックで検証を押す。<br>
+            </p>
+            <p>
+                <img src="images/python/log_insta/11.png" width="60%" alt="Connect with EMG"><br>
+                ②必要なパートのHTMLを見つけて縦3点を押す。<br>
+                （探したいところで右クリックしてもう一度検証すると簡単にいけます。）<br>
+            </p>
+            <p>
+                <img src="images/python/log_insta/12.png" width="60%" alt="Connect with EMG"><br>
+                ③Copy Xpathを選択。<br>
+            </p>
+        
+        <h2>■プログラム説明</h2>
+        
+            <p>
+                <div class="back">
+                    <div class="code">
+                        from selenium import webdriver　<br>
+                        import chromedriver_binary<br><br>
+
+                        ID = ''<br>
+                        PW = ''<br><br>
+
+                        driver = webdriver.Chrome()<br>
+                        driver.get('https://www.instagram.com/')<br>
+                        driver.implicitly_wait(10)<br><br>
+
+                        id_box = driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[1]/div/label/input')<br>
+                        id_box.send_keys(ID)<br><br>
+
+                        pw_box = driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[2]/div/label/input')<br>
+                        pw_box.send_keys(PW)<br><br>
+
+                        lg_box = driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[3]/button/div')<br>
+                        lg_box.submit()<br><br>
+                    </div>  
+                </div>
+            </p>
+        
+        <h3>・解説</h3>
+            <p>
+                <span class="blackback">
+                    from selenium import webdriver　<br>
+                    import chromedriver_binary<br>
+                </span><br>
+                ①インポート
+            </p>
+
+            <p>
+                <span class="blackback">
+                    ID = ''<br>
+                        PW = ''<br>
+                </span><br>
+                ②それぞれのログインのための、IDとパスワードを入れる。
+            </p>
+
+            <p>
+                <span class="blackback">
+                    driver = webdriver.Chrome()<br>
+                        driver.get('https://www.instagram.com/')<br>
+                        driver.implicitly_wait(10)<br>
+                </span><br>
+                ③ここでインスタのホームページを呼ぶ。 <br> 
+                &emsp;（）内はインスタのURL。 <br> 
+                &emsp;そして１０秒待機。 <br> 
+            </p>
+
+            <p>
+                <span class="blackback">
+                    id_box = driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[1]/div/label/input')<br>
+                        id_box.send_keys(ID)<br><br>
+                </span><br>
+                ④IDを送る。
+            </p>
+
+            <p>
+                <span class="blackback">
+                    pw_box = driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[2]/div/label/input')<br>
+                        pw_box.send_keys(PW)<br><br>
+                </span><br>
+                ⑤パスワードを送る。
+            </p>
+
+            <p>
+                <span class="blackback">
+                    lg_box = driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[3]/button/div')<br>
+                        lg_box.submit()<br><br>
+                </span><br>
+                ⑥最後に、ログインボックスを押す。
+            </p>
+
+        <h2>■完成</h2>
+            <h3>・ログイン</h3>
+                <p>
+                    <img src="images/python/log_insta/fin.png"  width="60%" alt="goal"><br>
+                </p>
+            <h3>・コード</h3>
+                <p>
+                    <img src="images/python/log_insta/code.png"  width="60%" alt="program"><br>
+                </p>
+        
+            <p>
+                これでインスタグラムに自動でログインできるようになりました。<br><br>
+                もっと発展的にやりたい人は、これを応用して<br>
+                高度なことに挑戦してみてください。<br><br>
+                私は、DM自動削除や、スクレイピングも組み合わせて、<br>
+                DMで自動でニュースを送信するといったことを作成しました。<br><br>
+                いつかそれも投稿します。<br><br><br><br><br><br><br><br><br>
+
+                <b>Fin.</b> 
+            </p>
+            
+        
+                
+    </ul>
+
+    
+    <ul class="last">
+        <img src="images/index/TAMIO.png" alt="">
+        <h5>Thank you for visiting. See you soon...<br>©Kenshin Tanno</h5>
+    </ul>
+
+
+</body>
+</html>
