@@ -79,6 +79,11 @@ h4{
 p{
     margin-left: 6em;
 }
+.bobody video{
+    width: 60%;
+    height: 60%;
+    border: 2px #252525 solid;
+}
 
 .bobody img{
     margin: 10px 0px 10px 0px;

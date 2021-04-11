@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>slide_implementation</title>
+        
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="sum_css/thir_index.css">
+        <script src="sum_js/thir_script.js" defer></script>
+    </head>
+
+<body>
+    <header id="header">
+        <img src="images/index/TAMIO10.png" alt="tamiologo">
+        <nav>
+          <ul>
+            <a href="index.html">Home</a>
+            <a href="arduino.html">Arduino</a>
+            <a href="python.html">Python</a>
+            <a href="vsc.html">HTML</a>
+            <a href="fab.html">FAB</a>
+            <a href="fab.html">etc</a>
+          </ul>
+        </nav>
+        <div class="tel">ようこそ☺︎</div>
+    </header>
+
+    <ul class="bobody">
+
+        <h1>HPにスライドを実装する方法</h1>
+
+        <br>
+        &emsp; 今回は、HPにスライドを実装していきたいと思います。<br>
+        <br>
+
+        <h2>■今日のゴール</h2>
+            <h3>・HP</h3>
+                <p>
+                    <video autoplay muted playsinline src="images//html/slide/1.mov"></video>
+                </p>
+            <h3  id="wow">・コード</h3>
+                <h4>▶︎HTML</h4>
+                <p>
+                    <img src="images/html/slide/2.png" width="40%" alt="Graphic"><br>
+                </p>
+                <h4 id="uho">▶︎CSS</h4>
+                <p>
+                    <img src="images/html/slide/3.png" width="40%" alt="Graphic"><br>
+                </p>
+                <h4>▶︎JavaScript</h4>
+                <p>
+                    <img src="images/html/slide/4.png" width="40%" alt="Graphic"><br>
+                </p>
+
+        <h2>■使用するPC・ソフト・サイト</h2>
+                <br>
+                <p>
+                <b>・Macbook pro</b>  <br>
+                <b>・Visual Studio Code</b>  <br>
+                <b>・<a href="https://swiperjs.com">Swiper</a> </b><br>
+                </p>
+
+        <h2>■前準備</h2>
+
+            <h3>・Swiperのコードを取得</h3>
+                <h4>▶︎Swiperを使う土台</h4>
+                <p>
+                        実はこのスライド、サイトからコードを持ってくるだけなので、とっても簡単です。<br>
+                </p>
+                <p>
+                    ① <a href="ttps://swiperjs.com">Swiper</a> に移動。<br>
+                </p>
+                <p>
+                    <img src="images/html/slide/5-1.png" width="50%" alt="Connect with EMG"><br>
+                    ②Get Startedへ。<br>
+                </p>
+                <p>
+                    <img src="images/html/slide/5.png" width="60%" alt="..."><br>
+                    ③示されたリンクをコピーして、HTMLのCSSとJSのところにペースト。（参考: <a href="#wow">ゴールの画像</a> ）<br>
+                </p>
+
+                <h4>▶︎HTMLコード</h4>
+                <p>
+                    <img src="images/html/slide/6.png" width="40%" alt="Connect with EMG"><br>
+                    ①先ほどコピーしたサイトを、そのまま下にスクロールしていくとある、このコードをコピペ。<br>
+                    （参考: <a href="#wow">HTMLの画像</a> ）
+                </p>
+                <h4>▶︎JavaScriptコード</h4>
+                <p>
+                    <img src="images/html/slide/7.png" width="40%" alt="Connect with EMG"><br>
+                    ①少し下に行ったところの、コードをコピペ。<br>
+                    （参考: <a href="#uho">JSの画像</a> ）
+                </p>
+
+        <h2>■プログラム(HTML)</h2>
+        
+            <p>
+                <div class="back">
+                    <div class="code">
+                        &lt;head&gt;<br>
+                            　&lt;meta charset=&quot;UTF-8&quot;/&gt;<br>
+                            　&lt;title&gt;Kenshin Tanno&#039;s HP&lt;/title&gt;<br>
+                            　&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/swiper/swiper-bundle.min.css&quot; /&gt;<br>
+                            　&lt;link rel=&quot;stylesheet&quot; href=&quot;sum_css/first_index.css&quot;&gt;<br><br>
+
+                            　&lt;script src=&quot;https://unpkg.com/swiper/swiper-bundle.min.js&quot; defer&gt;&lt;/script&gt;<br>
+                            　&lt;script src=&quot;sum_js/script.js&quot; defer&gt;&lt;/script&gt;<br>
+                        &lt;/head&gt;<br><br>
+
+                        &lt;div class=&quot;swiper-container&quot;&gt;<br><br>
+
+                            　&lt;div class=&quot;swiper-wrapper&quot;&gt;<br>
+                            　&lt;div class=&quot;swiper-slide slide1&quot;&gt;&lt;/div&gt;<br>
+                            　&lt;div class=&quot;swiper-slide slide2&quot;&gt;&lt;/div&gt;<br>
+                            　&lt;div class=&quot;swiper-slide slide3&quot;&gt;&lt;/div&gt;<br>
+                            　&lt;div class=&quot;swiper-slide slide4&quot;&gt;&lt;/div&gt;<br>
+                            　&lt;/div&gt;<br><br>
+
+                            　&lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt;<br><br>
+
+                            　&lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;<br>
+                            　&lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;<br><br>
+
+                        &lt;/div&gt;<br><br>
+                    </div>  
+                </div>
+            </p>
+        
+        <h3>・解説（HTML）</h3>
+            <p>
+                <span class="blackback">
+                            　&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/swiper/swiper-bundle.min.css&quot; /&gt;<br>
+                            　&lt;link rel=&quot;stylesheet&quot; href=&quot;sum_css/first_index.css&quot;&gt;<br>
+
+                            　&lt;script src=&quot;https://unpkg.com/swiper/swiper-bundle.min.js&quot; defer&gt;&lt;/script&gt;<br>
+                            　&lt;script src=&quot;sum_js/script.js&quot; defer&gt;&lt;/script&gt;<br>
+                </span><br>
+                ①CSSとJSの読み込みを行なっている。deferをつけることを忘れずに。
+            </p>
+
+            <p>
+                <span class="blackback">
+                        　&lt;div class=&quot;swiper-slide slide1&quot;&gt;&lt;/div&gt;<br>
+                        　&lt;div class=&quot;swiper-slide slide2&quot;&gt;&lt;/div&gt;<br>
+                        　&lt;div class=&quot;swiper-slide slide3&quot;&gt;&lt;/div&gt;<br>
+                        　&lt;div class=&quot;swiper-slide slide4&quot;&gt;&lt;/div&gt;<br>
+                </span><br>
+                ②スライド画像を読み込むコード。設定はCSSで行う。
+            </p>
+
+            <p>
+                <span class="blackback">
+                    &lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt;<br>
+                </span><br>
+                ③ここはページネーションを表示する。<br> 
+            </p>
+
+            <p>
+                <span class="blackback">
+                    &lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;<br>
+                    &lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;<br>
+                </span><br>
+                ④スライドの前後に移動する矢印の表示する。
+            </p>
+
+        <h2>■プログラム(CSS)</h2>
+        
+            <p>
+                <div class="back">
+                    <div class="code">
+                        .swiper-container{<br>
+                            animation: slideAnimation 3s;<br>
+                            margin-bottom: 300px;<br>
+                        }<br><br>
+                        
+                        .swiper-slide{<br>
+                            height: 100vh;<br>
+                            width: 100%;<br>
+                            background-size: cover;<br>
+                            background-position: center;<br>
+                            background-repeat: no-repeat;<br>
+                        }<br><br>
+                        
+                        .swiper-slide.slide1{<br>
+                            background-image: url(../images/index/slide_1_real.jpg);<br>
+                        }<br>
+                        .swiper-slide.slide2{<br>
+                            background-image: url(../images/index/slide2.jpg);<br>
+                        }<br>
+                        .swiper-slide.slide3{<br>
+                            background-image: url(../images/index/slide3-2.jpg);<br>
+                        }<br>
+                        .swiper-slide.slide4{<br>
+                            background-image: url(../images/index/slide4-2.jpg);<br>
+                        }<br><br>
+                    </div>  
+                </div>
+            </p>
+        
+        <h3>・解説（CSS）</h3>
+            <p>
+                <span class="blackback">
+                    　.swiper-container{<br>
+                        animation: slideAnimation 3s;<br>
+                        margin-bottom: 300px;<br>
+                    　}<br>
+                </span><br>
+                ①スライド全ての操作を行なっている。アニメーションはJSで行う。
+            </p>
+
+            <p>
+                <span class="blackback">
+                    　.swiper-slide{<br>
+                        height: 100vh;<br>
+                        width: 100%;<br>
+                        background-size: cover;<br>
+                        background-position: center;<br>
+                        background-repeat: no-repeat;<br>
+                    　}<br>
+                </span><br>
+                ②スライドの表示サイズを設定している。
+            </p>
+
+            <p>
+                <span class="blackback">
+                    .swiper-slide.slide1{<br>
+                        background-image: url(../images/index/slide_1_real.jpg);<br>
+                    }<br>
+                    .swiper-slide.slide2{<br>
+                        background-image: url(../images/index/slide2.jpg);<br>
+                    }<br>
+                    .swiper-slide.slide3{<br>
+                        background-image: url(../images/index/slide3-2.jpg);<br>
+                    }<br>
+                    .swiper-slide.slide4{<br>
+                        background-image: url(../images/index/slide4-2.jpg);<br>
+                    }<br>
+                </span><br>
+                ③ここで表示させたい画像の読み込みを行なっている。<br> 
+            </p>
+
+        <h2>■プログラム(JavaScript)</h2>
+        
+            <p>
+                <div class="back">
+                    <div class="code">
+                        const swiper = new Swiper('.swiper-container', {<br>
+                            　// Optional parameters<br>
+                            　loop: true,<br>
+                            　speed:1000,<br><br>
+                        
+                            　autoplay:{<br>
+                                　　delay:5000<br>
+                            　},<br><br>
+                          
+                            　// If we need pagination<br>
+                            　pagination: {<br>
+                              　　el: '.swiper-pagination',<br>
+                            　},<br><br>
+                          
+                            　// Navigation arrows<br>
+                            　navigation: {<br>
+                              　　nextEl: '.swiper-button-next',<br>
+                              　　prevEl: '.swiper-button-prev',<br>
+                            　},<br><br>
+                          
+                          });<br><br>
+                    </div>  
+                </div>
+            </p>
+        
+        <h3>・解説（JavaScript）</h3>
+            <p>
+                <span class="blackback">
+                    　const swiper = new Swiper('.swiper-container', {});<br><br>
+                </span><br>
+                ①ここで読み込む。
+            </p>
+
+            <p>
+                <span class="blackback">
+                    　loop: true,<br>
+                    　speed:1000,<br><br>
+                </span><br>
+                ②ループをありにして、スライドスピードを調整している。
+            </p>
+
+            <p>
+                <span class="blackback">
+                    autoplay:{<br>
+                        　delay:5000<br>
+                    },<br><br>
+                </span><br>
+                ③自動で動くようにし、5秒間待機させている。<br> 
+            </p>
+
+            <p>
+                <span class="blackback">
+                    pagination: {<br>
+                        　el: '.swiper-pagination',<br>
+                    },<br><br>
+                </span><br>
+                ④ページネーションが必要ならこれを記述する。<br> 
+            </p>
+
+            <p>
+                <span class="blackback">
+                    navigation: {<br>
+                    　　nextEl: '.swiper-button-next',<br>
+                    　　prevEl: '.swiper-button-prev',<br>
+                    },<br><br>
+                </span><br>
+                ⑤スライドを移動させる前後の矢印を表示させている。<br> 
+            </p>
+
+        <h2>■完成</h2>
+            <h3>・HP</h3>
+            <p>
+                <video autoplay muted playsinline src="images//html/slide/1.mov"></video>
+            </p>
+            <h3>・コード</h3>
+            <h4>▶︎HTML</h4>
+            <p>
+                <img src="images/html/slide/2.png" width="40%" alt="Graphic"><br>
+            </p>
+            <h4>▶︎CSS</h4>
+            <p>
+                <img src="images/html/slide/3.png" width="40%" alt="Graphic"><br>
+            </p>
+            <h4>▶︎JavaScript</h4>
+            <p>
+                <img src="images/html/slide/4.png" width="40%" alt="Graphic"><br>
+            </p>
+
+            <p>
+                これでスライドを実装できるようになったと思います。<br><br>
+                これは、 <a href="https://youtu.be/Du816rEE1Cg">こちら</a>のYouTuberさんを参考にしています。 <br>
+                YouTubeには、わかりやすい解説動画がたくさん載っているので、是非飛んで見てください。<br><br>
+                ちなみに、スライドの画像はPhotoshopとIllustraterで作成しました。<br>
+                もし画像の作成方法が、気になる方はいつかアップするので待っていてください。
+                <br><br><br><br><br><br><br><br><br>
+
+                <b>Fin.</b> 
+            </p>
+            
+        
+                
+    </ul>
+
+    
+    <ul class="last">
+        <img src="images/index/TAMIO.png" alt="">
+        <h5>Thank you for visiting. See you soon...<br>©Kenshin Tanno</h5>
+    </ul>
+
+
+</body>
+</html>
