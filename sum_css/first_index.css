@@ -153,18 +153,6 @@ main{
     opacity: 1;
 }
 
-.text li:before {
-    content:  "";     /* 空の要素作成 */
-    width:  10px;               /* 幅指定 */
-    height:  10px;              /* 高さ指定 */
-    display:  inline-block;     /* インラインブロックにする */
-    background-color: #435b70;  /* 背景色指定 */
-    border-radius:  80%;        /* 要素を丸くする */
-    position:  relative;        /* 位置調整 */
-    top: -1px;                  /* 位置調整 */
-    margin-right: 5px;          /* 余白指定 */
-}
-
 .pic{
     display: flex;
     width: 100%;
@@ -177,10 +165,24 @@ main{
     transition: 3s;
 }
 
-.pic img{
+.pic .me{
     width: 30%;
     height: 30%;
     padding: 50px;
+    position: relative;
+}
+
+.pic .ar{
+    width: 2%;
+    position: absolute;
+    left: 46.5%;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.pic:hover .ar{
+    opacity: 0.03;
 }
 
 .text{
@@ -203,6 +205,17 @@ main{
     font-size: 20px;
 }
 
+.text li:before {
+    content:  "";     /* 空の要素作成 */
+    width:  10px;               /* 幅指定 */
+    height:  10px;              /* 高さ指定 */
+    display:  inline-block;     /* インラインブロックにする */
+    background-color: #435b70;  /* 背景色指定 */
+    border-radius:  80%;        /* 要素を丸くする */
+    position:  relative;        /* 位置調整 */
+    top: -1px;                  /* 位置調整 */
+    margin-right: 5px;          /* 余白指定 */
+}
 
 .contents li{
     list-style: none;
@@ -298,17 +311,29 @@ figure img {
     .swiper-slide{
         height: 680px;
     }
+
+    .pic .ar{
+        left: 43%;
+    }
 }
 
 @media screen and (max-width: 1160px){
     .swiper-slide{
         height: 650px;
     }
+
+    .pic .ar{
+        left: 43%;
+    }
 }
 
 @media screen and (max-width: 1075px){
     .swiper-slide{
         height: 630px;
+    }
+
+    .pic .ar{
+        left: 43%;
     }
 }
 
@@ -362,10 +387,14 @@ figure img {
     }
 
 
-    .pic img{
+    .pic .me{
         width: 40%;
         height: 40%;
         padding: 5px;
+    }
+
+    .pic .ar{
+        left: 50%;
     }
 
     .text{
@@ -445,10 +474,14 @@ figure img {
     }
 
 
-    .pic img{
+    .pic .me{
         width: 50%;
         height: 50%;
         padding: 5px;
+    }
+
+    .pic .ar{
+        left: 55%;
     }
 
     .text{
@@ -588,10 +621,14 @@ figure img {
     }
 
 
-    .pic img{
+    .pic .me{
         width: 35%;
         height: 35%;
         padding: 3px;
+    }
+
+    .pic .ar{
+        left: 47%;
     }
 
     .text{
@@ -741,10 +778,14 @@ figure img {
     }
 
 
-    .pic img{
+    .pic .me{
         width: 35%;
         height: 35%;
         padding: 3px;
+    }
+
+    .pic .ar{
+        left: 47%;
     }
 
     .text{
@@ -896,10 +937,14 @@ figure img {
     }
 
 
-    .pic img{
+    .pic .me{
         width: 35%;
         height: 35%;
         padding: 3px;
+    }
+
+    .pic .ar{
+        left: 47%;
     }
 
     .text{
@@ -1018,10 +1063,14 @@ figure img {
         height: 50px;
     }
 
-    .pic img{
+    .pic .me{
         width: 35%;
         height: 35%;
         padding: 1px;
+    }
+
+    .pic .ar{
+        left: 47%;
     }
 
     .text{

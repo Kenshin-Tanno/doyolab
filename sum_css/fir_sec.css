@@ -1,0 +1,460 @@
+@charset "utf-8";
+
+body{
+    font-family: "YuKyokasho";
+} 
+
+
+@keyframes themeAnimation{
+    0%{
+        opacity: 0;
+    }
+}
+
+@keyframes secretAnimation{
+    0%{
+        opacity: 0;
+    }
+}
+
+.theme{
+    
+    animation: secretAnimation 120s;
+    color: rgb(250, 250, 250);
+    margin-top: 350px;
+    margin-bottom: 350px;
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1em;
+}
+
+.declare{
+    animation: secretAnimation 240s;
+    margin-top: 700px;
+    font-size: 30px;
+    letter-spacing: 0.5em;
+    color: rgb(250, 250, 250);
+    text-align: center;
+    font-weight: bold;
+}
+
+.intro{
+    animation: secretAnimation 360s;
+    line-height: 100%;
+    letter-spacing: 1em;
+    color: rgb(250, 250, 250);
+    margin-top: 700px;
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.victim{
+    opacity: 0;
+    margin-top: 550px;
+    margin-bottom: 150px;
+    /* color: rgb(250, 250, 250); */
+}
+
+.pic{
+    animation: themeAnimation 10s;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic img{
+    opacity: 0.8;
+    width: 20%;
+    margin-right: 50px;
+}
+
+.text{
+    color: rgb(250, 250, 250);
+    white-space: nowrap;
+    margin-left: 50px;
+}
+
+.text h1{
+    margin-top: 30px;
+    font-size: 40px;
+    letter-spacing: 1em;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    text-align: center;
+}
+
+.text h2{
+    margin-top: 300px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.big{
+    animation: secretAnimation 420s;
+    color: rgb(250, 250, 250);
+    margin-top: 700px;
+    margin-bottom: 0px;
+    display: block;
+    text-align: center;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+
+.last{
+    display: flex;
+    margin-top: 700px;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.last img{
+    display: block;
+    padding: 50px;
+    width: 30%;
+}
+
+.last h5{
+    color: rgb(250, 250, 250);
+    margin-top: 400px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    line-height: 100%;
+    font-family: 'Comic Sans MS',cursive;
+    display: block;
+    white-space: nowrap;
+    padding: 50px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1024px){
+
+    .big h1{
+        font-size: 70px;
+        padding: 5px;
+    }
+    
+    .text h1{
+        font-size: 25px;
+        padding: 10px;
+    }
+    
+    .text h2{
+        font-size: 23px;
+        padding: 10px;
+    }
+
+    .text li{
+        font-size: 20px;
+        padding: 15px;
+    }
+
+
+    .pic img{
+        width: 40%;
+        height: 40%;
+        padding: 5px;
+    }
+
+    .text{
+        padding: 5px;
+    }
+
+    .last img{
+        padding: 30px;
+    }
+    
+    .last h5{
+        display: block;
+        white-space: nowrap;
+        padding: 30px;
+        font-size: 15px;
+    }
+    
+}
+
+@media screen and (max-width: 768px){
+
+    .big h1{
+        font-size: 40px;
+        padding: 5px;
+    }
+    
+    .text h1{
+        font-size: 18px;
+    }
+    
+    .text h2{
+        font-size: 16px;
+    }
+
+    .text li{
+        font-size: 14px;
+        padding: none;
+    }
+
+    .pic img{
+        width: 50%;
+        height: 50%;
+        padding: 5px;
+    }
+
+    .text{
+        padding: 5px;
+    }
+    
+    .last h5{
+        display: block;
+        white-space: nowrap;
+        padding: 30px;
+        font-size: 15px;
+    }
+    
+}
+
+@media screen and (max-width: 428px){
+
+    .big h1{
+        font-size: 27px;
+        padding: 3px;
+        height: 50px;
+    }
+    
+    .text h1{
+        font-size: 12px;
+        padding: 3px;
+        margin-bottom: 2px;
+    }
+
+    .text br{
+        display: none;
+    }
+    
+    .text h2{
+        margin-top: 20px;
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    .text li{
+        font-size: 8px;
+        padding: 1px;
+    }
+
+
+    .pic img{
+        width: 35%;
+        height: 35%;
+        padding: 3px;
+    }
+
+    .text{
+        padding: 3px;
+    }
+
+    .last{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .last img{
+        width: 20%;
+    }
+    
+    .last h5{
+        display: block;
+        white-space: nowrap;
+        padding: 15px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 414px){
+
+    .big h1{
+        font-size: 27px;
+        padding: 3px;
+        height: 50px;
+    }
+    
+    .text h1{
+        font-size: 12px;
+        padding: 3px;
+        margin-bottom: 2px;
+    }
+
+    .text br{
+        display: none;
+    }
+    
+    .text h2{
+        margin-top: 20px;
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    .text li{
+        font-size: 8px;
+        padding: 1px;
+    }
+
+
+    .pic img{
+        width: 35%;
+        height: 35%;
+        padding: 3px;
+    }
+
+    .text{
+        padding: 3px;
+    }
+
+    .last{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .last img{
+        padding: 15px;
+        width: 20%;
+    }
+    
+    .last h5{
+        display: block;
+        white-space: nowrap;
+        padding: 15px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 375px){
+
+    .big h1{
+        font-size: 27px;
+        padding: 3px;
+        height: 50px;
+    }
+    
+    .text h1{
+        font-size: 12px;
+        padding: 3px;
+        margin-bottom: 2px;
+    }
+
+    .text br{
+        display: none;
+    }
+    
+    .text h2{
+        margin-top: 20px;
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    .text li{
+        font-size: 8px;
+        padding: 1px;
+    }
+
+
+    .pic img{
+        width: 35%;
+        height: 35%;
+        padding: 3px;
+    }
+
+    .text{
+        padding: 3px;
+    }
+    .last{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .last img{
+        padding: 15px;
+        width: 20%;
+    }
+    
+    .last h5{
+        display: block;
+        white-space: nowrap;
+        padding: 15px;
+        font-size: 10px;
+    }
+
+    
+}
+
+@media screen and (max-width: 320px){
+
+    .big h1{
+        font-size: 25px;
+        padding: 1px;
+        height: 50px;
+    }
+    
+    .pic img{
+        width: 35%;
+        height: 35%;
+        padding: 1px;
+    }
+
+    .text{
+        padding: 1px;
+    }
+
+    .text h1{
+        font-size: 8px;
+        padding: 1px;
+        margin-bottom: 2px;
+    }
+
+    .text br{
+        display: none;
+    }
+    
+    .text h2{
+        margin-top: 20px;
+        font-size: 6px;
+        padding: 5px;
+    }
+
+    .text li{
+        font-size: 4px;
+        padding: 2px;
+    }
+    
+    .last{
+        height: 70px;
+    }
+
+    .last img{
+        width: 15%;
+    }
+    
+    .last h5{
+        padding: 3px;
+        font-size: 3px;
+    }
+
+    
+}
