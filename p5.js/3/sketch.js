@@ -17,7 +17,7 @@ function canvasSetup(){
 
     flowfield = new Array(cols * rows);
 
-    for (let i = 0; i < 10000; i++){
+    for (let i = 0; i < 20000; i++){
         particles[i] = new Particle();
     }
 }
