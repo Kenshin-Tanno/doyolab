@@ -89,7 +89,7 @@ header .tel {
 .big{
     font-family: "YuKyokasho";
     margin-top: 300px;
-    margin-bottom: 300px;
+    margin-bottom: 0px;
     height: 300px;
     display: flex;
     justify-content: center;
@@ -157,7 +157,7 @@ main{
     display: flex;
     width: 100%;
     margin-top: 300px;
-    margin-bottom: 300px;
+    margin-bottom: 0px;
     justify-content: center;
     align-items: center;
     opacity: 0;
@@ -221,7 +221,7 @@ main{
     list-style: none;
     position: relative;
     margin-top: 200px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 
 .contents li:nth-of-type(odd){
