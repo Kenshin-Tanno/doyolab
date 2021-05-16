@@ -166,8 +166,8 @@ main{
 }
 
 .pic .me{
-    width: 30%;
-    height: 30%;
+    width: 25%;
+    height: 25%;
     padding: 50px;
     position: relative;
 }
@@ -175,14 +175,14 @@ main{
 .pic .ar{
     width: 2%;
     position: absolute;
-    left: 46.5%;
+    left: 44.3%;
     opacity: 0;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
 
 .pic:hover .ar{
-    opacity: 0.03;
+    opacity: 0.1;
 }
 
 .text{
@@ -220,7 +220,7 @@ main{
 .contents li{
     list-style: none;
     position: relative;
-    margin-top: 200px;
+    margin-top: 100px;
     margin-bottom: 100px;
 }
 
