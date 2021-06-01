@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>change_rate</title>
+        
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="sum_css/thir_index.css">
+        <script src="sum_js/thir_script.js" defer></script>
+    </head>
+
+<body>
+    <header id="header">
+        <img src="images/index/TAMIO10.png" alt="tamiologo">
+        <nav>
+          <ul>
+            <a href="index.html">Home</a>
+            <a href="arduino.html">Electronics</a>
+            <a href="python.html">Programing</a>
+            <a href="etc.html">etc</a>
+          </ul>
+        </nav>
+        <div class="tel">Hello!</div>
+    </header>
+
+    <ul class="bobody">
+
+        <h1>GPSの測位レートを速くする方法</h1>
+
+        <br>
+        &emsp; 今回は、GPSの更新頻度を速くする方法ついて書いていきます。<br>
+        <br>
+
+        <h2>■なぜ高速化が必要？</h2>
+                <p>
+                    そもそも、なぜ高速化が必要なのか。<br>
+                    それは、更新頻度をあげればあげるほど、測定の精度を高めることができるからです。<br>
+                    イメージはこちらの
+                    <a href="https://www.furuno.com/jp/gnss/technical/tec_rate">参考資料</a></b>
+                    のような感じです。 <br>
+                    以上のため、GPSの更新頻度をあげました。<br>
+                </p>
+
+        <h2>■使用するPC・モジュール</h2>
+                <br>
+                <p>
+                <b>・Windows（Windowsでしかできないから）<br></b>
+                <b> ・<a href="https://akizukidenshi.com/catalog/g/gK-09991/">GPS</a> </b>  <br>
+                <b> ・<a href="https://akizukidenshi.com/catalog/g/gM-08461/">USBシリアル変換モジュール</a> </b>  <br>
+                </p>
+
+        <h2>■ハードウェア準備</h2>
+                <p>
+                    <img src="images/arduino/change_rate/1.jpeg" width="30%" alt="Connect with EMG"><br>
+                    ① 変換モジュールに半田付けをする。<br>
+                    ※足が短かったためジャンパーワイヤーを足につけた。<br>
+                </p>
+                <p>
+                    <img src="images/arduino/change_rate/2.jpeg" width="20%" alt="Connect with EMG"><br>
+                    ②変換モジュールとGPSをブレッドボードを用いて繋げ、そしてUSBをPCへ。<br>
+                </p>
+            
+        <h2>■COM確認</h2>
+                <p>
+                    <img src="images/arduino/change_rate/3.png" width="20%" alt="Connect with EMG"><br>
+                    ③デバイスマネージャーを開いて、ポートナンバーを確認する。<br>
+                </p>
+
+        <h2>■ソフトを開く</h2>
+                <p>
+                    <img src="images/arduino/change_rate/4.png" width="50%" alt="Connect with EMG"><br>
+                    ④先程のGPSの<a href="https://akizukidenshi.com/catalog/g/gK-09991/">サイト</a>に移動して、ソフトをダウンロード。<br>
+                </p>
+                <p>
+                    <img src="images/arduino/change_rate/5.png" width="30%" alt="Connect with EMG"><br>
+                    ⑤ダウンロードしたものを開く。<br>
+                </p>
+                <p>
+                    <img src="images/arduino/change_rate/6.png" width="30%" alt="Connect with EMG"><br>
+                    ⑥画像の通り選択。<br>
+                </p>
+                <p>
+                    <img src="images/arduino/change_rate/7.png" width="30%" alt="Connect with EMG"><br>
+                    ⑦画像の通り選択。<br>
+                </p>
+            
+        <h2>■ソフト操作</h2>
+                <p>
+                    <img src="images/arduino/change_rate/8.png" width="20%" alt="Connect with EMG"><br>
+                    ⑧ソフトを開いたら、赤丸の部分を先程確認したCOMナンバーと9600に変更しopenを選択。<br>
+                </p>
+                <p>
+                    <img src="images/arduino/change_rate/10.png" width="20%" alt="Connect with EMG"><br>
+                    ⑨通信が始まるとこのようになります。<br>
+                </p>
+                <p>
+                    <img src="images/arduino/change_rate/9.png" width="20%" alt="Connect with EMG"><br>
+                    ⑩最後に、Ctrl + Alt + Sを選択すると上部の表示が増えるため、Setupを選択して任意のレートに変更し終了です。<br>
+                </p>
+        
+        <h2>■終了</h2>
+            <p>
+                これでGPSの更新レートが上昇しました。<br>
+                GPSを使用する際には参考にしてみてください。<br>
+                <br><br><br><br><br><br><br><br><br>
+
+                <b>Fin.</b> 
+            </p>
+            
+        
+                
+    </ul>
+
+    
+    <ul class="last">
+        <img src="images/index/TAMIO.png" alt="">
+        <h5>Thank you for visiting. See you soon...<br>©Kenshin Tanno</h5>
+    </ul>
+
+
+</body>
+</html>
