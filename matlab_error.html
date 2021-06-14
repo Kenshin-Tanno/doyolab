@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>matlab_error</title>
+        
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="sum_css/thir_index.css">
+        <script src="sum_js/thir_script.js" defer></script>
+    </head>
+
+<body>
+    <header id="header">
+        <img src="images/index/TAMIO10.png" alt="tamiologo">
+        <nav>
+          <ul>
+            <a href="index.html">Home</a>
+            <a href="arduino.html">Electronics</a>
+            <a href="python.html">Programing</a>
+            <a href="etc.html">etc</a>
+          </ul>
+        </nav>
+        <div class="tel">Hello!</div>
+    </header>
+
+    <ul class="bobody">
+
+        <h1>MATLABが遅い時の対処法</h1>
+
+        <br>
+        &emsp; 今回は、MATLABが遅いのを改善する方法について書いていきます。<br>
+        <br>
+
+        <h2>■MATLABとは？</h2>
+                <p>
+                    <img src="images/python/matlab_error/1.png" width="20%" alt="Connect with EMG"><br>
+                    <img src="images/python/matlab_error/2.png" width="50%" alt="Connect with EMG"><br><br>
+                    ・MATLABはインタプリタ型のプログラミング言語です。<br><br>
+                    ・計算処理や作図等が得意な言語であるため、主に分析する際に使われているという印象です。<br><br>
+                    ・私はまだ主要には使用していないのですが、必要に応じて使用していきたいと考えています。<br><br>
+
+                </p>
+
+        <h2>■本題</h2>
+            <h3>・MATLABがとても遅かった</h3>
+                <p>
+                    <video autoplay muted playsinline src="images/python/matlab_error/3.mov"></video><br><br>
+                    ・インストールしたはいいものの、上の動画のように（動かない場合は更新してください）とても遅くて<br>
+                    　文字を打つのも一苦労、何をするのにも時間がかかってストレスだった。<br><br>
+                    ・調べても有益な情報が出てこなかったため、問い合わせて解決策を提示してもらった。<br><br>
+                    ・その方法を共有したい。<br><br>
+                </p>
+
+            <h3>・解決策</h3>
+                <p>
+                    ①まず、ターミナルを開きチェンジディレクトリを行う。<br>
+                    ※これは個人によって違うと思います。<br>
+                    　<span class="blackback">
+                    cd /Applications/MATLAB_R2021a.app/bin<br>
+                    </span><br>
+                </p>
+
+                <p>
+                    ②ノーデスクトップに移動する。<br>
+                    　<span class="blackback">
+                    ./matlab -nodesktop<br>
+                    </span><br>
+                </p>
+
+                <p>
+                    ③そのままターミナル上で下記を打ち込む。<br>
+                    　<span class="blackback">
+                    s = settings;<br>
+                    </span>
+                    　<span class="blackback">
+                    s.matlab.editor.InitializeAtStartup.PersonalValue = 0;<br>
+                    </span><br>
+                </p>
+
+                <p>
+                    ④終了する。<br>
+                    　<span class="blackback">
+                    quit<br>
+                    </span><br>
+                </p>
+
+                <p>
+                    ⑤通常の起動方法でMATLABを起動させて解決。<br>
+                </p>
+
+            
+
+        <h2>■完成</h2>
+
+            <p>
+                これでMATLABが超遅かった問題が解決しました。<br><br>
+                是非、MATLABを使用してこの問題が起きた時は参考にしてみてください。
+                <br><br><br><br><br><br><br><br><br>
+
+                <b>Fin.</b> 
+            </p>
+            
+        
+                
+    </ul>
+
+    
+    <ul class="last">
+        <img src="images/index/TAMIO.png" alt="">
+        <h5>Thank you for visiting. See you soon...<br>©Kenshin Tanno</h5>
+    </ul>
+
+
+</body>
+</html>
