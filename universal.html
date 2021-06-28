@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>univarsal</title>
+        
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="sum_css/thir_index.css">
+        <script src="sum_js/thir_script.js" defer></script>
+    </head>
+
+<body>
+    <header id="header">
+        <img src="images/index/TAMIO10.png" alt="tamiologo">
+        <nav>
+          <ul>
+            <a href="index.html">Home</a>
+            <a href="arduino.html">Electronics</a>
+            <a href="python.html">Programing</a>
+            <a href="etc.html">etc</a>
+          </ul>
+        </nav>
+        <div class="tel">Hello!</div>
+    </header>
+
+    <ul class="bobody">
+
+        <h1>ユニバーサル基盤の使い方</h1>
+
+        <br>
+        &emsp; 今回は、ユニバーサル基盤の使い方について書いていきます。<br>
+        <br>
+
+        <h2>■ユニバーサル基盤とは？</h2>
+                <p>
+                    まず <b>ブレッドボード</b> についての復習。<br><br>
+                    <img src="images/arduino/universal/1-2.jpeg" width="30%" alt="Connect with EMG"><br><br>
+                    ・真ん中の部分は横方向にそれぞれ繋がっている。<br><br>
+                    ・＋とーの部分は、縦方向に繋がっている。<br><br>
+                    ・メリットは配線が <b>簡単</b> 、デメリットは無駄が多いことが挙げられる。<br><br><br>
+
+                    それでは <b>ユニバーサル基盤</b> を見ていく。<br><br>
+                    <img src="images/arduino/universal/2.jpeg" width="30%" alt="Connect with EMG"><br><br>
+                    ・ユニバーサル基盤はそれぞれの穴が独立して存在している。<br><br>
+                    ・そのため、スペースの無駄が省けたり、配線の <b>自由度</b> が上がったりする。<br><br>
+                    ・その一方で、配線の難易度が上がるデメリットもある。<br><br>
+
+                </p>
+
+        <h2>■配線パターン</h2>
+                <p>
+                    ユニバーサル基盤を使用した際に、行なった配線のパターンを記載する。<br><br>
+                </p>
+
+            <h3>・パターン1</h3>
+                <p>
+                    <img src="images/arduino/universal/3.jpeg" width="30%" alt="Connect with EMG"><br><br>
+                    ・モジュールとマイコンを接続する際に、ピンとワイヤーを使用した。<br><br>
+                    ・さらに中継ぎにもワイヤーを使用した。<br><br>
+                    ・半田付けする箇所が三箇所もあり、ゴチャゴチャしてしまった。<br><br>
+                </p>
+            
+            <h3>・パターン2</h3>
+                <p>
+                    <img src="images/arduino/universal/4.jpeg" width="20%" alt="Connect with EMG"><br><br>
+                    ・現在、上記の反省を踏まえ、別の配線方法で試作している。<br><br>
+                    ・ピンを使用せずに、ワイヤーのみで配線に挑戦している。<br><br>
+                    ・それにより、半田付けする箇所が一箇所でよくなった。<br><br>
+                    ・また、パターン１よりも見た目がスッキリした。<br><br>
+                </p>
+
+            <h3>・パターン3</h3>
+                <p>
+                    <img src="images/arduino/universal/5.jpeg" width="20%" alt="Connect with EMG"><br><br>
+                    ・これはーと＋の箇所を増やす配線方法である。<br><br>
+                    ・＋とーのピンは少ないにもかかわらず、とても多く使用する。<br><br>
+                    ・そのため、増やすことが必要不可欠である。<br><br>
+                    ・ハンダを繋げてしまうことによってその問題をクリアした。<br><br>
+                </p>
+
+            <h3>・パターン4</h3>
+                <p>
+                    <img src="images/arduino/universal/6.jpeg" width="20%" alt="Connect with EMG"><br><br>
+                    ・最後は斜めの箇所を繋げる方法である。<br><br>
+                    ・斜めの関係は、半田で繋げるには遠く、ワイヤーでは近すぎるという問題がある。<br><br>
+                    ・そのため、ヘッダピンを短くして使用したところ、上手く解決した。<br><br>
+                </p>
+
+        <h2>■使用した結果</h2>
+
+            <p>
+                ユニバーサル基盤を使用したことで、<br><br>
+                <img src="images/arduino/universal/7.jpeg" width="30%" alt="Connect with EMG"><br><br>
+                この大きさだったものを、<br><br>
+                <img src="images/arduino/universal/8.jpeg" width="30%" alt="Connect with EMG"><br><br>
+                ここまで、縮小することに成功した。<br><br><br><br>
+
+                しかしさらに、三分の一以下の大きさにできると考えている。<br><br>
+                それは、プリント基盤やフレキシブル基盤を使用することによって可能である。<br><br>
+                まだまだ学習すべきことだらけである。<br><br>
+                <br><br><br><br><br><br><br><br><br>
+
+                <b>Fin.</b> 
+            </p>
+            
+        
+                
+    </ul>
+
+    
+    <ul class="last">
+        <img src="images/index/TAMIO.png" alt="">
+        <h5>Thank you for visiting. See you soon...<br>©Kenshin Tanno</h5>
+    </ul>
+
+
+</body>
+</html>
