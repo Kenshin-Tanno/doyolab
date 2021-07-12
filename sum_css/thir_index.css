@@ -91,10 +91,45 @@ p{
 }
 
 .blackback{
-    margin-left: 3px;
-    text-indent: 4em;
-    background: #393939;
-    color: #efefef;
+    letter-spacing: 0.05em;
+    background: #fcd1fd;
+    color: #3f3f3f;
+    font-weight: bold;
+}
+
+.pink{
+    letter-spacing: 0.05em;
+    background: #fcd1fd;
+    color: #3f3f3f;
+    font-weight: bold;
+}
+
+.yellow{
+    letter-spacing: 0.05em;
+    background: #fdf9d1;
+    color: #3f3f3f;
+    font-weight: bold;
+}
+
+.green{
+    letter-spacing: 0.05em;
+    background: #d5fdd1;
+    color: #3f3f3f;
+    font-weight: bold;
+}
+
+.blue{
+    letter-spacing: 0.05em;
+    background: #d1f0fd;
+    color: #3f3f3f;
+    font-weight: bold;
+}
+
+.orenge{
+    letter-spacing: 0.05em;
+    background: #fddbd1;
+    color: #3f3f3f;
+    font-weight: bold;
 }
 
 .back{

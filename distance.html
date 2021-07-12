@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>distane</title>
+        
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="sum_css/thir_index.css">
+        <script src="sum_js/thir_script.js" defer></script>
+    </head>
+
+<body>
+    <header id="header">
+        <img src="images/index/TAMIO10.png" alt="tamiologo">
+        <nav>
+          <ul>
+            <a href="index.html">Home</a>
+            <a href="arduino.html">Electronics</a>
+            <a href="python.html">Programing</a>
+            <a href="etc.html">etc</a>
+          </ul>
+        </nav>
+        <div class="tel">Hello!</div>
+    </header>
+
+    <ul class="bobody">
+
+        <h1>ヒュベニの公式を実際のデータで試してみた</h1><br>
+
+        <p>
+            ・家からキャンパス間を、GPS計測してみました。<br><br>
+            ・その計測したデータをヒュベニの公式に当てはめて距離を算出しました。<br><br>
+            ・その結果は正確なのか？<br><br>
+        </p>
+
+        <h2>■使用するPC・ソフト</h2>
+            <p>
+            <b>・Macbook pro</b>  <br><br>
+            <b>・jupyter lab</b>  <br><br>
+            </p>
+
+        <h2>■全体のコード</h2>
+            <p>
+                ①<br><img src="images/python/distance/1.png" width="40%" alt="Graphic"><br>
+                ②<br><img src="images/python/distance/2.png" width="40%" alt="Graphic"><br>
+                ③<br><img src="images/python/distance/3.png" width="40%" alt="Graphic"><br>
+            </p>
+        
+        <h2>■解説</h2>
+
+        <h3>①インポート＆リードデータ</h3>
+            <p>
+                ①必要なモジュールをインポート<br><br>
+                <span class="pink">
+                    　from matplotlib import pyplot as plt　<br>
+                    　%matplotlib inline　<br>
+                    　import numpy as np　<br>
+                    　import pandas as pd　<br>
+                    　import seaborn as sns　<br><br>
+                </span>
+                
+                ②読み込みたいデータのパスを記述<br><br>
+                <span class="pink">
+                    　df = read_data("/Users/...")　<br><br>
+                </span>
+                
+                ③ファンクションでデータを編集<br><br>
+                <span class="pink">
+                    　def read_data(file_path):　<br>
+
+                    　column_names = ['lattitude',
+                                    'longitude',
+                                    'speed(km/h)',
+                                    'temp-l',
+                                    'temp-r']　<br>
+                    
+                    　df = pd.read_csv(file_path,
+                                     header=None,
+                                     names=column_names)　<br>
+                    　return df　<br><br>
+                </span>
+            </p>
+
+        <h3>②データをリストに変換</h3>
+            <p>
+                ①データフレームへ<br><br>
+                <span class="blue">
+                    　GPS_TEMP = pd.DataFrame(df)　<br><br>
+                </span>
+
+                ②リストへ<br><br>
+                <span class="blue">
+                    　LIST_LAT = df['lattitude'].tolist()　<br>
+                    　LONG_LIST = df['longitude'].tolist()　<br><br>
+                </span>
+            </p>
+
+        <h3>③距離算出</h3>
+
+            <p>
+                ①インポート＆変数用意<br><br>
+                <span class="yellow">
+                    　import math　<br>
+
+                    　Latitude = [0,0]　<br>
+                    　Longitude = [0,0]　<br>
+                    　Rx = 6378137　<br>
+                    　Ry = 6356752　<br>
+                    　AD = 0;　<br>
+                    　PowE = pow(math.sqrt((pow(Rx,2)-pow(Ry,2))/pow(Rx,2)),2);　<br>
+                    　i = 0　<br><br>
+                </span>
+
+                ②forとifでデータをひとつずつ箱に格納<br><br>
+                <span class="yellow">
+                    　for j in range((len(LIST_LAT)-1)*3):　<br>
+                    　if i < 2:　<br>
+                        　Latitude[i] = LIST_LAT[i]　<br>
+                        　Longitude[i] = LONG_LIST[i]　<br>
+                        　i += 1　<br><br>
+                </span>
+
+                ③elseで計算＆変数リセット<br><br>
+                <span class="green">
+                    　else:　<br>
+                    　LatRad0 = Latitude[0]*math.pi/180　<br>
+                    　LatRad1 = Latitude[1]*math.pi/180　<br>
+                    　LogRad0 = Longitude[0]*math.pi/180　<br>
+                    　LogRad1 = Longitude[1]*math.pi/180　<br>
+                    　Dy = LatRad0 - LatRad1　<br>
+                    　Dx = LogRad0 - LogRad1　<br>
+                    　P = (LatRad0 + LatRad1)/2　<br>
+                    　W = math.sqrt(1 - (PowE*pow(math.sin(P),2)))　<br>
+                    　M = (Rx*(1-PowE))/pow(W,3)　<br>
+                    　N = Rx/W　<br>
+                   　 D = math.sqrt(pow(Dy*M,2) + pow(Dx*N*math.cos(P),2))　<br>
+                    　if df['speed(km/h)'][o] <= 2:　<font color="red">←ここでノイズを除去しているためここは非常に重要</font><br>
+                        　D = 0　<br>
+                    　AD += D　<br>
+                    　LIST_LAT.pop(0)　<br>
+                    　LONG_LIST.pop(0)　<br>
+                    　i = 0　<br><br>
+                </span>
+
+                ④結果をプリント<br><br>
+                <span class="yellow">
+                    　print(round(AD,8))　<br><br>
+                </span>
+
+        <h2>■結果と現実の距離の比較</h2>
+        <h3>・算出結果</h3>
+            <p>
+                ・ヒュベニの公式を使用した距離測定の結果は、
+                <span class="orenge">
+                    　68.6km　
+                </span>になりました。<br><br>
+            </p>
+
+        <h3>・実際の距離</h3>
+            <p>
+                ・最寄りから横浜までの距離は、
+                <span class="orenge">
+                    　65.9km　
+                </span>。<br><br>
+                ・家から駅と駅からキャンパスの距離は、
+                <span class="orenge">
+                    　2km　
+                </span>。<br><br>
+                ・そのため実際の距離は、
+                <span class="orenge">
+                    　約67.9km　
+                </span>となり、ほぼほぼ正確であると言えると思います。<br><br>
+            </p>
+
+        <h2>■最後に</h2>
+            <p>
+                ・ノイズを除去する数値を上げたり下げたりすることによって、<br><br>
+                　より正確に出せる可能性があるので、とても良い公式であると思います。<br><br>
+                <br><br><br><br><br><br><br><br><br>
+
+                <b>Fin.</b> 
+            </p>
+            
+        
+                
+    </ul>
+
+    
+    <ul class="last">
+        <img src="images/index/TAMIO.png" alt="">
+        <h5>Thank you for visiting. See you soon...<br>©Kenshin Tanno</h5>
+    </ul>
+
+
+</body>
+</html>
