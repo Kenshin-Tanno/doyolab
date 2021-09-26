@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>print</title>
+        
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="sum_css/thir_index.css">
+        <script src="sum_js/thir_script.js" defer></script>
+    </head>
+
+<body>
+    <header id="header">
+        <img src="images/index/TAMIO10.png" alt="tamiologo">
+        <nav>
+          <ul>
+            <a href="index.html">Home</a>
+            <a href="arduino.html">Electronics</a>
+            <a href="python.html">Programing</a>
+            <a href="etc.html">etc</a>
+          </ul>
+        </nav>
+        <div class="tel">Hello!</div>
+    </header>
+
+    <ul class="bobody">
+
+        <h1>プリント基盤の発注方法</h1>
+
+        <br>
+            &emsp; 今回は、プリント基盤を発注する方法について書いていきます。<br><br>
+        <br>
+
+        <h2>0.プリント基盤とは？</h2>
+                <p>
+                    <img src="images/arduino/print/0.jpeg" width="30%" alt="Connect with EMG"><br><br>
+                    ・プリント基盤は画像のように部品を実装していく基盤です。<br><br>
+                    ・配線がすでに基盤上で行われているため、ユニバーサル基盤や<br>
+                    　ブレッドボードなどよりもコンパクトにできます。<br><br>
+                    ・配線や部品の配置等は自分でデザインし、製造は企業に発注します。<br><br>
+                </p>
+
+        <h2>1.データを用意</h2>
+                <p>
+                    <img src="images/arduino/print/1.png" width="40%" alt="Connect with EMG"><br><br>
+                    ・画像のようなデータを用意します。<br><br>
+                    ※データの作成方法は今後アップします。<br><br>
+                </p>
+        
+        <h2>2.データを圧縮</h2>
+                <p>
+                    <img src="images/arduino/print/2.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・先程のデータを圧縮して一つにします。<br><br>
+                    ・このデータは最後にまた使用します。<br><br>
+                </p>
+        
+        <h2>3.発注の必要事項を記入①</h2>
+                <p>
+                    <b>発注サイトURL:<a href="https://www.pcbgogo.jp/pcb-fabrication-quote.html">https://www.pcbgogo.jp/pcb-fabrication-quote.html</a> </b><br><br>
+                    ・URLをクリックしてサイトに移動。<br><br>
+                    ・PCBgogoさんに製造してもらいます。<br><br>
+                    <img src="images/arduino/print/3.png" width="40%" alt="Connect with EMG"><br><br>
+                    ・上記の写真のように選択します。<br><br>
+                    ※赤丸1=デザインした基盤と同じサイズを記入<br><br>
+                    ※赤丸2=頼みたい枚数を選択。<br><br>
+                    ・結構高い確率で数枚多く入れてくれます。<br><br>
+                    ・最高で5枚を選択したのに12枚きました。<br><br>
+                </p>
+
+        <h2>4.発注の必要事項を記入②</h2>
+                <p>
+                    <img src="images/arduino/print/4.png" width="40%" alt="Connect with EMG"><br><br>
+                    ・上記の写真のように選択します。<br><br>
+                    ※赤丸1&2=好きな色を選択します。私のおすすめはつや消しの黒です。<br><br>
+                    ※赤丸3=表面実装の部品を使う方は、これを'あり'にしておくと後々助かります。<br><br>
+                </p>
+
+        <h2>5.メタルマスク詳細</h2>
+                <p>
+                    <img src="images/arduino/print/5.png" width="40%" alt="Connect with EMG"><br><br>
+                    ・上記の写真のように選択します。<br><br>
+                    ※赤丸2=なるべく小さいサイズを選択した方が良いと思います。<br><br>
+                    ※赤丸1=枠があると安定しますが、枠はない方がいいと思います。<br><br>
+                    その理由がこちら<br><br>
+                    <img src="images/arduino/print/10.jpeg" width="30%" alt="Connect with EMG"><br><br>
+                    ・デカスギ！<br><br>
+                    ①が枠なし、②が枠付きです。<br><br>
+                    ・40cmほどになります。収納に困るのでやめた方が良いです。<br><br>
+                </p>
+
+        <h2>6.カートに入れる</h2>
+                <p>
+                    <img src="images/arduino/print/6.png" width="20%" alt="Connect with EMG">
+                    <img src="images/arduino/print/7.png" width="20%" alt="Connect with EMG"><br><br>
+                    ・お好みで選択して、最後にカートに入れるを選択してください。<br><br>
+                    ※赤丸1=メールアドレスを記入しないと次に進めません。<br><br>
+                </p>
+
+        <h2>7.データを入稿</h2>
+                <p>
+                    <img src="images/arduino/print/8.png" width="40%" alt="Connect with EMG"><br><br>
+                    ※赤丸1&2=作成した圧縮データを入稿して確認を選択。<br><br>
+                </p>
+
+        <h2>8.購入</h2>
+                <p>
+                    <img src="images/arduino/print/9.png" width="40%" alt="Connect with EMG"><br><br>
+                    ※赤丸1&2=ここで一度、データに対して企業からチェックが入ります。<br>
+                    ・エラーがあったらメールが来るので修正します。<br>
+                    ・何もなかったら１０分後くらいにレジに進むを選択できるようになります。<br><br>
+                    ・あとは会計を済ますだけ。<br><br>
+                </p>
+
+
+        <h2>■最後に</h2>
+
+            <p>
+                ・今回は発注方法に焦点を当てました。<br><br>
+                ・今後、データをデザインする方法をアップする予定ですが、<br>
+                　早く勉強したいという方は、<a href="https://www.youtube.com/watch?v=GCUV6gfacP4&t=0s">こちら</a>
+                の動画で勉強してみてください。<br><br>
+                <br><br><br><br><br><br><br><br><br>
+
+                <b>Fin.</b> 
+            </p>
+            
+        
+                
+    </ul>
+
+    
+    <ul class="last">
+        <img src="images/index/TAMIO.png" alt="">
+        <h5>Thank you for visiting. See you soon...<br>©Kenshin Tanno</h5>
+    </ul>
+
+
+</body>
+</html>
