@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>footprint</title>
+        
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="sum_css/thir_index.css">
+        <script src="sum_js/thir_script.js" defer></script>
+    </head>
+
+<body>
+    <header id="header">
+        <img src="images/index/TAMIO10.png" alt="tamiologo">
+        <nav>
+          <ul>
+            <a href="index.html">Home</a>
+            <a href="arduino.html">Electronics</a>
+            <a href="python.html">Programing</a>
+            <a href="etc.html">etc</a>
+          </ul>
+        </nav>
+        <div class="tel">Hello!</div>
+    </header>
+
+    <ul class="bobody">
+
+        <h1>フットプリントの作成の仕方</h1>
+
+        <br>
+            &emsp; 今回は、フットプリントを作成する方法について書いていきます。<br><br>
+        <br>
+
+        <h2>0.フットプリントとは？</h2>
+                <p>
+                    <img src="images/arduino/top/footprint.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・写真のようなもの。
+                    ・基盤をデザインするために必要なオブジェクト。<br><br>
+                    ・配線をために作る。<br><br>
+                </p>
+
+        <h2>1.設計図を用意</h2>
+                <p>
+                    <img src="images/arduino/footprint/1-1.png" width="20%" alt="Connect with EMG">
+                    <img src="images/arduino/footprint/1-2.png" width="20%" alt="Connect with EMG"><br><br>
+                    ・フットプリントを作成したい部品の設計図を用意します。<br><br>
+                    ・このデータは大体商品のデータシートにあります。<br><br>
+                </p>
+        
+        <h2>2.フットプリントのライブラリを作る</h2>
+                <p>
+                    <img src="images/arduino/footprint/1.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・kicadの中の赤丸のエディタを開く。<br><br>
+                    <img src="images/arduino/footprint/2.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・左上のファイルから新規ライブラリを選択。<br><br>
+                    <img src="images/arduino/footprint/3.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・適当に文字を入れる。<br><br>
+                    <img src="images/arduino/footprint/4.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・グローバルだと管理が大変らしいので、プロジェクトを選択。<br><br>
+                    <img src="images/arduino/footprint/5.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・そしたら、先ほど入れた名前を赤線のところで検索。<br><br>
+                    <img src="images/arduino/footprint/6.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・右クリックして新規フットプリントを選択。<br><br>
+                    <img src="images/arduino/footprint/7.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・適当に名前をつける。<br><br>
+                </p>
+        
+        <h2>3.パッドを作成</h2>
+                <p>
+                    <img src="images/arduino/footprint/8.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・今回はこれを作る。<br><br>
+                    <img src="images/arduino/footprint/9.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・赤丸のところがパッドを作るファンクションなので選択。<br><br>
+                    <img src="images/arduino/footprint/10.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・デカくて丸くて黄色いのになるが問題ない。<br><br>
+                    <img src="images/arduino/footprint/11.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・適当な位置に配置。<br><br>
+                    <img src="images/arduino/footprint/12.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・一旦右クリックしてキャンセルを選択。<br><br>
+                </p>
+
+        <h2>4.サイズを調整</h2>
+                <p>
+                    <img src="images/arduino/footprint/13.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・そしたら配置したオブジェの上で右クリックでプロパティを選択。<br><br>
+                    <img src="images/arduino/footprint/13-2.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・本日使う設計図を確認。<br><br>
+                    ・xの長さが0.6、yの長さが0.5である。<br><br>
+                    <img src="images/arduino/footprint/14.png" width="50%" alt="Connect with EMG"><br><br>
+                    ・赤線部分を編集。<br><br>
+                    ・パッドの番号は被らないように1からつけていく。<br><br>
+                    ・サイズX、サイズYのところに先程の長さを入れる。<br><br>
+                    ・OKを選択。<br><br>
+                    <img src="images/arduino/footprint/15.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・そしたら形が変わる。<br><br>
+                </p>
+
+        <h2>5.パッドを配置</h2>
+                <p>
+                    <img src="images/arduino/footprint/13-2.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・三つのパッドの間は1mm。<br><br>
+                    <img src="images/arduino/footprint/16.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・なので上のサイズ変更のところから1mm間隔にサイズを変える。<br><br>
+                    <img src="images/arduino/footprint/17.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・先程のパッドの上で右クリックして複製を選択。<br><br>
+                    <img src="images/arduino/footprint/18.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・1mm間隔で配置する。<br><br>
+                    <img src="images/arduino/footprint/19.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・先程のようにプロパティから番号を変更する。<br><br>
+                </p>
+
+        <h2>6.残りのパッドを作成して配置</h2>
+                <p>
+                    <img src="images/arduino/footprint/19-2.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・この写真を参考に作成・配置する。<br><br>
+                    <img src="images/arduino/footprint/20.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・X:0.9mm、Y:0.7mmのパッドを作成する。
+                    ・三つの部品の1.1mm上で中心から3mm離れたところに配置する。<br><br>
+                    ・完成
+                </p>
+
+        <h2>7.テキストを記入</h2>
+                <p>
+                    <img src="images/arduino/footprint/21.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・赤丸部分を選択。<br><br>
+                    <img src="images/arduino/footprint/22.png" width="30%" alt="Connect with EMG"><br><br>
+                    ・適当な位置に文字を入力。<br><br>
+                </p>
+
+        <h2>■最後に</h2>
+
+            <p>
+                ・今回はフットプリントを作成しました。<br><br>
+                ・まだまだ何をしているかわからないと思いますが、後々重要になってきます。<br><br>
+                ・今後、少しずつアップをしていきますが、早く勉強したいという方は、<a href="https://youtu.be/et6R49Azckc">こちら</a>
+                の動画で勉強してみてください。<br><br>
+                <br><br><br><br><br><br><br><br><br>
+
+                <b>Fin.</b> 
+            </p>
+            
+        
+                
+    </ul>
+
+    
+    <ul class="last">
+        <img src="images/index/TAMIO.png" alt="">
+        <h5>Thank you for visiting. See you soon...<br>©Kenshin Tanno</h5>
+    </ul>
+
+
+</body>
+</html>
