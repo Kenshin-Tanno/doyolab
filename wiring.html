@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>wiring</title>
+        
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="sum_css/thir_index.css">
+        <script src="sum_js/thir_script.js" defer></script>
+    </head>
+
+<body>
+    <header id="header">
+        <img src="images/index/TAMIO10.png" alt="tamiologo">
+        <nav>
+          <ul>
+            <a href="index.html">Home</a>
+            <a href="arduino.html">Electronics</a>
+            <a href="python.html">Programing</a>
+            <a href="etc.html">etc</a>
+          </ul>
+        </nav>
+        <div class="tel">Hello!</div>
+    </header>
+
+    <ul class="bobody">
+
+        <h1>自動配線の仕方</h1>
+
+        <br>
+            &emsp; 今回は、自動で配線する方法について書いていきます。<br><br>
+        <br>
+
+        <h2>0.配線とは？</h2>
+                <p>
+                    <img src="images/arduino/top/wiring.png" width="40%" alt="Connect with EMG"><br><br>
+                    ・写真のようなもの。<br><br>
+                    ・基盤を作る際に必要になる。<br><br>
+                </p>
+
+        <h2>1.ソフトをダウンロード</h2>
+                <p>
+                    ・<a href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbFlwbE1sV3VWd1l3V1RrVFRXbE5qckZQcXZMZ3xBQ3Jtc0tuTzg2dklDXzEwaHhSMjBnZkdBd3ZUd09qd2pWNXpDUTJiTVFWMjllMnlOQV93MUtXYUVNMWFHN3dPSnAtR0tmNlFEa21fM0NWaXp4ZnBSSjdTaTFlQk1Uei1iSXdLUE1aY1pqcXc2clZiTlN2bW9aSQ&q=https%3A%2F%2Fgithub.com%2Ffreerouting%2Ffreerouting%2Ffiles%2F1282814%2Ffreeroute.jar.zip">自動配線ソフト</a><br><br>
+                    ・まずは自動配線ソフトをダウンロードして開いてみる。<br><br>
+                    ・開けない場合はjavaの環境が整っていない可能性があるため、下記をダウンロード。<br><br>
+                    ・<a href="https://java.com/ja/download/">java</a><br><br>
+                </p>
+            
+        <h2>2.ファイルを開く</h2>
+                <p>
+                    <img src="images/arduino/wiring/1.png" width="40%" alt="Connect with EMG"><br><br>
+                    ・インストールしたものを開いたら小さいウィンドウが出てくる。<br><br>
+                    <img src="images/arduino/wiring/2.png" width="40%" alt="Connect with EMG"><br><br>
+                    ・Open Your Own Designを選択して、拡張子がdsnのファイルを選択すると開ける。<br><br>
+                </p>
+        
+        <h2>3.詳細を設定</h2>
+                <p>
+                    <img src="images/arduino/wiring/3.png" width="40%" alt="Connect with EMG"><br><br>
+                    ・赤線の部分を25に変更。<br><br>
+                    <img src="images/arduino/wiring/4.png" width="40%" alt="Connect with EMG"><br><br>
+                    ・milに変更。<br><br>
+                </p>
+
+        <h2>4.配線開始</h2>
+                <p>
+                    <img src="images/arduino/wiring/5.png" width="40%" alt="Connect with EMG"><br><br>
+                    ・Autorouterをクリックすると自動配線が始まる。<br><br>
+                    <img src="images/arduino/wiring/6.png" width="40%" alt="Connect with EMG"><br><br>
+                    ・1番当てはまりの良い配線を見つけたら、自動で止まってくれる。<br><br>
+                </p>
+
+        <h2>5.ファイル出力</h2>
+                <p>
+                    <img src="images/arduino/wiring/7.png" width="40%" alt="Connect with EMG"><br><br>
+                    ・Fileの1番下の赤線の部分をクリック。<br><br>
+                    <img src="images/arduino/wiring/8.png" width="40%" alt="Connect with EMG"><br><br>
+                    ・はいを選択。<br><br>
+                    <img src="images/arduino/wiring/9.png" width="40%" alt="Connect with EMG"><br><br>
+                    ・そうすると拡張子dsnで入れたものが、sesになって保存されている。<br><br>
+                </p>
+
+        <h2>6.ファイルをインポート</h2>
+                <p>
+                    <img src="images/arduino/wiring/10.png" width="40%" alt="Connect with EMG"><br><br>
+                    ・kicadを開いて赤丸をクリック。<br><br>
+                    <img src="images/arduino/wiring/11.png" width="40%" alt="Connect with EMG"><br><br>
+                    ・ファイル>インポート>で赤線の部分をクリック。<br><br>
+                    <img src="images/arduino/wiring/12.png" width="40%" alt="Connect with EMG"><br><br>
+                    ・そうすると配線された基盤が出現する。<br><br>
+                </p>
+
+        <h2>■最後に</h2>
+
+            <p>
+                ・今回は自動配線を行いました。<br><br>
+                <br><br><br><br><br><br><br><br><br>
+
+                <b>Fin.</b> 
+            </p>
+            
+        
+                
+    </ul>
+
+    
+    <ul class="last">
+        <img src="images/index/TAMIO.png" alt="">
+        <h5>Thank you for visiting. See you soon...<br>©Kenshin Tanno</h5>
+    </ul>
+
+
+</body>
+</html>
