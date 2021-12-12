@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>table_tarm</title>
+        
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="sum_css/thir_index.css">
+        <script src="sum_js/thir_script.js" defer></script>
+    </head>
+
+<body>
+    <header id="header">
+        <img src="images/index/TAMIO10.png" alt="tamiologo">
+        <nav>
+          <ul>
+            <a href="index.html">Home</a>
+            <a href="arduino.html">Electronics</a>
+            <a href="python.html">Programing</a>
+            <a href="etc.html">etc</a>
+          </ul>
+        </nav>
+        <div class="tel">Hello!</div>
+    </header>
+
+    <ul class="bobody">
+
+        <h1>DB / Tableの作り方（Tarminal）</h1>
+
+        <br>
+            &emsp; 今回は、mysqlのデータベースとテーブルの作り方(Tarminal version)について書いていきます。<br><br>
+        <br>
+
+        <h2>0.DB / Tableとは？</h2>
+            <p>
+                ・<a href="https://it-trend.jp/database/article/89-0065">この記事</a>によると、データベースとは決まった形式で<br>
+                　整理されたデータの集まりのことだと言われている。<br><br>
+                ・一方でテーブルとは、<a href="https://it-trend.jp/database/article/89-0061">この記事</a>でデータベースの種類<br>
+                　ごとの単位のことだと定義されている。<br><br>
+            </p>
+
+        <h2>1.Tarminalを開く</h2>
+            <p>
+                ・まずはターミナルを開いてください。<br><br>
+            </p>
+        
+        <h2>2.チェンジディレクトリをする</h2>
+            <p>
+                ・MAMPが格納されているところに移動するので、<br>
+                　下記のコードを入力してください。<br><br>
+                <span class="blackback">
+                    cd /Applications/MAMP/Library/bin/ <br>
+                </span><br><br>
+            </p>
+
+        <h2>3.mysqlコマンドを実行する</h2>
+            <p>
+                ・mysqlコマンドを実行するので下記のコードと、<br>
+                　パスワードを入力してください。<br>
+                ※ 最初は全員rootだと思います。<br><br>
+                <span class="blackback">
+                    ./mysql -u root -p <br>
+                </span><br><br>
+            </p>
+
+        <h2>4.データベースを作成</h2>
+            <p>
+                ・いよいよデータベースを作成します。<br>
+                　下記のコードを入力してください。<br><br>
+                ・今回はfootballデータベースを作成します。<br><br>
+                <span class="blackback">
+                    create database football; <br>
+                </span><br><br>
+                <img src="images/python/table_tarm/1.png" width="40%" alt="Graphic"><br><br>
+                ・phpadminをみてみると作成に成功しているのがわかります。<br><br>
+            </p>
+
+        <h2>5.データベースを選択</h2>
+            <p>
+                ・テーブルはデータベースの中に作成するものなので、<br>
+                　まずはテーブルを作るデータベースを選択します。<br><br>
+                <span class="blackback">
+                    use football; <br>
+                </span><br><br>
+            </p>
+
+        <h2>6.テーブルを作成</h2>
+            <p>
+                ・最後にテーブルを作成します。<br><br>
+                ・少し複雑ですが、次第に理解できるようになると思います。<br><br>
+                ・一行ずつエンターを押して入力してください。<br><br>
+                <span class="blackback">
+                    create table players( <br><br>
+                    id int auto_increment primary key, <br><br>
+                    name varchar(20) not null <br><br>
+                    ); <br><br>
+                </span><br><br>
+                <img src="images/python/table_tarm/2.png" width="40%" alt="Graphic"><br><br>
+                ・phpadminをみてみると作成に成功しているのがわかります。<br><br>
+            </p>
+
+        <h2>■最後に</h2>
+
+            <p>
+                今回はターミナルを使っての作成でしたが、<br>
+                phpadminを使った作成方法は<a href="table_phpad.html">こちら</a> で載せています。<br><br>
+                <br><br><br><br><br><br><br><br><br>
+
+                <b>Fin.</b> 
+            </p>
+            
+        
+                
+    </ul>
+
+    
+    <ul class="last">
+        <img src="images/index/TAMIO.png" alt="">
+        <h5>Thank you for visiting. See you soon...<br>©Kenshin Tanno</h5>
+    </ul>
+
+
+</body>
+</html>
