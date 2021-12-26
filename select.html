@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>table_phpad</title>
+        
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="sum_css/thir_index.css">
+        <script src="sum_js/thir_script.js" defer></script>
+    </head>
+
+<body>
+    <header id="header">
+        <img src="images/index/TAMIO10.png" alt="tamiologo">
+        <nav>
+          <ul>
+            <a href="index.html">Home</a>
+            <a href="arduino.html">Electronics</a>
+            <a href="python.html">Programing</a>
+            <a href="etc.html">etc</a>
+          </ul>
+        </nav>
+        <div class="tel">Hello!</div>
+    </header>
+
+    <ul class="bobody">
+
+        <h1>DBからデータを取得する方法</h1>
+
+        <br>
+            &emsp; 今回は、DBからデータを取得する方法について書いていきます。<br><br>
+        <br>
+
+        <h2>0.DBからデータを取得する方法は？</h2>
+            <p>
+                ・取得するにはSelect文を使います。<br><br>
+                ・前回使用したplayersテーブルからデータを取得します。<br><br>
+            </p>
+
+        <h2>1.MAMPをスタートさせる</h2>
+            <p>
+                ・まずMAMPを開いて、右上のスタートボタンを押します。<br><br>
+                <img src="images/python/insert/1.png" width="40%" alt="Connect with EMG"><br><br>
+            </p>
+            
+        <h2>2.ファイルを開く</h2>
+            <p>
+                ・前々回ほどに作成したhtdocsにあるcreate.phpを開いてください。<br><br>
+            </p>
+        
+        <h2>3.DBにログインする</h2>
+            <p>
+                ・まずは変数を書きます。<br><br>
+                <span class="blackback">
+                    $format = "mysql:host=localhost; dbname=%s; charset=utf8";<br><br>
+                    $dsn = sprintf($format, 'football');<br><br>
+                    $username = "root";<br><br>
+                    $password = "root";  <br>
+                </span><br><br>
+                ・formatの後にDB名のfootballを入力してください。<br><br>
+                ・usernameとpasswordはrootです。<br><br>
+                ・次にログインのコードを書きます。<br><br>
+                <span class="blackback">
+                    try {<br><br>
+                        $dbh = new PDO($dsn, $username, $password);<br><br>
+                        echo 'YES';
+                    } catch (PDOException $e) {<br><br>
+                        $msg = $e->getMessage();<br><br>
+                        echo $msg;
+                    }<br><br>
+                </span><br><br>
+                ・トライで囲み、エラーをキャッチできるようにします。<br><br>
+                ・PDOクラスを使いログインします。<br><br>
+                ・echoで書き出すことによって成功しているかを確認できます。<br><br>
+                ・確認方法は、http://localhost/create.phpでできると思います。<br><br>
+            </p>
+
+        <h2>4.データを取得する</h2>
+            <p>
+                ・Select文を書きます。<br><br>
+                <span class="blackback">
+                    $sql = "SELECT * FROM players";<br>
+                </span><br><br>
+                ・最後尾にテーブル名を書き込みます。<br><br>
+                ・次に実行します。<br><br>
+                <span class="blackback">
+                    $prepare = $dbh->prepare($sql);<br><br>
+                    $prepare->execute();<br>
+                </span><br><br>
+                ・これでデータは取得できました。<br><br>
+                ・しかしこれでは、取得できているのかわからないので表示させます。<br><br>
+            </p>
+
+        <h2>5.データを表示する</h2>
+            <p>
+                ・変数にデータを入れる。<br><br>
+                <span class="blackback">
+                    $result = $prepare->fetchAll(PDO::FETCH_ASSOC);<br>
+                </span><br><br>
+                ・次に表示します。<br><br>
+                <span class="blackback">
+                    foreach($result as $value){<br><br>
+                        echo $value['name'];<br><br>
+                    }<br>
+                </span><br><br>
+                ・これで表示できたと思います。<br><br>
+                ・http://localhost/create.phpをみて確認してください。<br><br>
+            </p>
+
+        <h2>■最後に</h2>
+            <p>
+                ・最後に私が作成したチャットで試してみたいと思います。<br><br>
+                <img src="images/python/insert/4.png" width="30%" alt="Connect with EMG"><br><br>
+                ・前回書き込んだI'm Kenshinを表示させます。<br><br>
+                <img src="images/python/insert/5.png" width="30%" alt="Connect with EMG"><br><br>
+                ・しっかりと表示されていました。<br><br>
+                データを書き込む方法は <a href="insert.html">こちら</a> で載せています。<br><br>
+                <br><br><br><br><br><br><br><br><br>
+
+                <b>Fin.</b> 
+            </p>
+            
+        
+                
+    </ul>
+
+    
+    <ul class="last">
+        <img src="images/index/TAMIO.png" alt="">
+        <h5>Thank you for visiting. See you soon...<br>©Kenshin Tanno</h5>
+    </ul>
+
+
+</body>
+</html>
