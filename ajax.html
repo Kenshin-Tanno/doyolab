@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>table_phpad</title>
+        
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="sum_css/thir_index.css">
+        <script src="sum_js/thir_script.js" defer></script>
+    </head>
+
+<body>
+    <header id="header">
+        <img src="images/index/TAMIO10.png" alt="tamiologo">
+        <nav>
+          <ul>
+            <a href="index.html">Home</a>
+            <a href="arduino.html">Electronics</a>
+            <a href="python.html">Programing</a>
+            <a href="etc.html">etc</a>
+          </ul>
+        </nav>
+        <div class="tel">Hello!</div>
+    </header>
+
+    <ul class="bobody">
+
+        <h1>ajaxの使い方</h1>
+
+        <br>
+            &emsp; 今回は、ajaxの使い方について書いていきます。<br><br>
+        <br>
+
+        <h2>0.ajaxとは？</h2>
+            <p>
+                ・ajaxとは非同期通信のこと。<br><br>
+                ・非同期通信とはページ遷移なしで更新できるもの。<br><br>
+                ・つまりajaxを使うことで、チャットのように自動で新しいものを表示できるようになる。<br><br>
+            </p>
+
+        <h2>1.MAMPをスタートさせる</h2>
+            <p>
+                ・まずMAMPを開いて、右上のスタートボタンを押します。<br><br>
+                <img src="images/python/insert/1.png" width="40%" alt="Connect with EMG"><br><br>
+            </p>
+            
+        <h2>2.ファイルを開く</h2>
+            <p>
+                ・htdocsに新たに、exam.phpとconnect.phpを作成してください。<br><br>
+                ・exam.phpとconnect.phpを開いてください。<br><br>
+            </p>
+        
+        <h2>3.フォームを作る</h2>
+            <p>
+                ・まずはフォームを作ります。<br><br>
+                ・フォームとは、アカウント登録をするときに名前などを入力するものです。<br><br>
+                <span class="blackback">
+                    &lt;form id=&quot;my_form&quot;&gt;<br><br>
+
+                        &lt;textarea id=&#039;text&#039; name=&quot;text&quot; placeholder=&quot;Put some words...&quot;&gt;&lt;/textarea&gt; <br><br>
+
+                        &lt;button type=&quot;button&quot; onclick=&quot;file_upload()&quot;&gt;Send&lt;/button&gt;<br><br>
+
+                    &lt;/form&gt;<br><br>
+
+                    &lt;div id=&#039;result&#039;&gt;&lt;/div&gt;
+                </span><br><br>
+                ・formのidをmy_formとする。<br><br>
+                ・テキストとボタンを作成する。<br><br>
+                ・ボタンのオンクリックでfile_uploadという関数を指定する。<br><br>
+                ・表示先に使用するためにdivを作成する。<br><br>
+                ・これで写真のようなフォームが作れたと思います。<br><br>
+                <img src="images/python/ajax/3.png" width="40%" alt="Connect with EMG"><br><br>
+                ・確認方法は、http://localhost/exam.phpでできると思います。<br><br>
+            </p>
+
+        <h2>4.ajaxを導入する</h2>
+            <p>
+                ・先程ボタンのオンクリックで書いた、file_uploadという関数の中にajaxを書いていきます。<br><br>
+                ・まずは関数と先程のデータの受け取りを行います。<br><br>
+                <span class="blackback">
+                    &lt;script&gt;<br><br>
+                    　function file_upload()<br><br>
+                    　{<br><br>
+                    　　var formdata = new FormData($(&#039;#my_form&#039;).get(0));<br><br>
+                </span><br><br>
+                ・次にajaxの細かい設定を行います。<br><br>
+                <span class="blackback">
+                    $.ajax({<br><br>
+                    　url  : &quot;connect.php&quot;,<br><br>
+                    　type : &quot;POST&quot;,<br><br>
+                    　data : formdata,<br><br>
+                    　cache       : false,<br><br>
+                    　contentType : false,<br><br>
+                    　processData : false,<br><br>
+                    　dataType    : &quot;html&quot;<br><br>
+                    })<br><br>
+                </span><br><br>
+                ・urlで処理を行いたい先のファイルを指定する。<br><br>
+                ・先程変数に入れたデータをdataで受け取る。<br><br>
+                ・次に、成功した場合、失敗した場合の処理を書きます。<br><br>
+                <span class="blackback">
+                    　　.done(function(data, textStatus, jqXHR){<br><br>
+                    　　　$(&quot;#result&quot;).html(data);<br><br>
+                    　　})<br><br>
+                    　　.fail(function(jqXHR, textStatus, errorThrown){<br><br>
+                    　　　alert(&quot;fail&quot;);<br><br>
+                    　　});<br><br>
+                　}<br><br>
+            &lt;/script&gt;<br><br>
+                </span><br><br>
+                ・成功した場合は、先程作成したdivのresultにデータを入れます。<br><br>
+                ・最後にスクリプトを締めて終了。<br><br>
+            </p>
+
+        <h2>5.指定先のphpを作成</h2>
+            <p>
+                ・データを受け取って処理するphpの内容を書きます。<br><br>
+                ・これは簡単です。<br><br>
+                <span class="blackback">
+                    &lt;?php<br><br>
+                        $text = $_POST[&#039;text&#039;];<br><br>
+                        print($text.&#039;&lt;br&gt;&#039;);<br><br>
+                    ?&gt;<br><br>
+                </span><br><br>
+                ・フォームのテキストの名前を引数に指定してデータを受け取る。<br><br>
+                ・それをプリントで表示する。<br><br>
+                ・これであとは、テキストに文字を入力し送信ボタンを押すだけです。<br><br>
+                <img src="images/python/ajax/5.png" width="40%" alt="Connect with EMG"><br><br>
+                ・このように表示されたら成功です。<br><br>
+                ・http://localhost/exam.phpをみて確認してください。<br><br>
+            </p>
+
+        <h2>■最後に</h2>
+            <p>
+                ・最後に私がデザインしたフォームで試してみたいと思います。<br><br>
+                <img src="images/python/ajax/1.png" width="30%" alt="Connect with EMG"><br><br>
+                ・書き込んで送信を押すと、<br><br>
+                <img src="images/python/ajax/2.png" width="30%" alt="Connect with EMG"><br><br>
+                ・しっかりと表示されました。<br><br><br><br>
+                ・このフォームで使った送信ボタンに変更する方法は <a href="icon.html">こちら</a> で載せています。<br><br>
+                <br><br><br><br><br><br><br><br><br>
+
+                <b>Fin.</b> 
+            </p>
+            
+        
+                
+    </ul>
+
+    
+    <ul class="last">
+        <img src="images/index/TAMIO.png" alt="">
+        <h5>Thank you for visiting. See you soon...<br>©Kenshin Tanno</h5>
+    </ul>
+
+
+</body>
+</html>

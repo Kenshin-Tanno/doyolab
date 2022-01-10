@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>table_phpad</title>
+        
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="sum_css/thir_index.css">
+        <script src="sum_js/thir_script.js" defer></script>
+    </head>
+
+<body>
+    <header id="header">
+        <img src="images/index/TAMIO10.png" alt="tamiologo">
+        <nav>
+          <ul>
+            <a href="index.html">Home</a>
+            <a href="arduino.html">Electronics</a>
+            <a href="python.html">Programing</a>
+            <a href="etc.html">etc</a>
+          </ul>
+        </nav>
+        <div class="tel">Hello!</div>
+    </header>
+
+    <ul class="bobody">
+
+        <h1>送信ボタンを変更する方法</h1>
+
+        <br>
+            &emsp; 今回は、送信ボタンを変更する方法について書いていきます。<br><br>
+        <br>
+
+        <h2>0.送信ボタンを変更する方法は？</h2>
+            <p>
+                ・簡単にいうとデフォルトのボタンを非表示にして、その上からボタンを自分で作ります。<br><br>
+            </p>
+
+        <h2>1.MAMPをスタートさせる</h2>
+            <p>
+                ・まずMAMPを開いて、右上のスタートボタンを押します。<br><br>
+                <img src="images/python/insert/1.png" width="40%" alt="Connect with EMG"><br><br>
+            </p>
+            
+        <h2>2.ファイルを開く</h2>
+            <p>
+                ・先程のexam.phpを開いてください。<br><br>
+                ・新たにtest.cssを作成して開いてください。<br><br>
+            </p>
+        
+        <h2>3.ボタンを修正する</h2>
+            <p>
+                ・先程のボタンのHTMLを以下のように治してください。<br><br>
+                <span class="blackback">
+                    &lt;label id=&#039;button&#039;&gt;<br><br>
+					　&lt;button class=&quot;button&quot; type=&quot;button&quot; name=&quot;send&quot; value=&quot;Send&quot; onclick=&quot;file_upload()&quot;&gt;&lt;/button&gt;<br><br>
+					　&lt;img class=&#039;sicon&#039;src=&quot;./setting_photo/send.png&quot; alt=&quot;&quot;&gt;<br><br>
+					&lt;/label&gt; <br><br>
+                </span><br><br>
+                ・ボタンにクラスを追加してください。<br><br>
+                ・新たにアイコンにしたい画像を、選んでパスを入れてください。<br><br>
+                ・画像のクラスをsiconにしてください。<br><br>
+            </p>
+
+        <h2>3.cssを編集する</h2>
+            <p>
+                ・先程指定した、二つのクラスに対してcssを作成していきます。<br><br>
+                <span class="blackback">
+                    .button<br><br>
+                    {<br><br>
+                    　display: none;<br><br>
+                    }<br><br>
+                    .sicon<br><br>
+                    {<br><br>
+                    　width: 30px;<br><br>
+                    }<br><br>
+                </span><br><br>
+                ・buttonクラスでまずデフォルトのボタンを非表示にします。<br><br>
+                ・siconでアイコンにしたい画像のサイズを入力します。<br><br>
+                ・これで以下の画像のようになったと思います。<br><br>
+                <img src="images/python/icon/5.png" width="30%" alt="Connect with EMG"><br><br>
+                ・http://localhost/exam.phpをみて確認してください。<br><br>
+            </p>
+
+        <h2>■最後に</h2>
+            <p>
+                ・今回はただの送信ボタンを、おしゃれにしました。<br><br>
+                ・さらに周りをデザインするだけでも、見やすくなります。<br><br>
+                <img src="images/python/icon/4.png" width="30%" alt="Connect with EMG"><br><br>
+                <br><br><br><br><br><br><br><br><br>
+
+                <b>Fin.</b> 
+            </p>
+            
+        
+                
+    </ul>
+
+    
+    <ul class="last">
+        <img src="images/index/TAMIO.png" alt="">
+        <h5>Thank you for visiting. See you soon...<br>©Kenshin Tanno</h5>
+    </ul>
+
+
+</body>
+</html>
